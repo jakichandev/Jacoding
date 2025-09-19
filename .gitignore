@@ -1,0 +1,46 @@
+# =============================
+# Node & Vite
+# =============================
+node_modules/
+dist/
+build/
+.vite/
+vite.config.local.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# =============================
+# Environment & Secrets
+# =============================
+.env
+.env.*.local
+!.env.example        # mantieni solo l'esempio
+
+# =============================
+# Editor / IDE
+# =============================
+.vscode/
+.idea/
+*.sw?
+*.swo
+*.swn
+*.swns
+.DS_Store
+Thumbs.db
+
+# =============================
+# Typescript
+# =============================
+*.tsbuildinfo
+
+# =============================
+# OS files
+# =============================
+*.bak
+*.tmp
+*.orig
