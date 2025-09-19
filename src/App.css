@@ -13,6 +13,9 @@
     --color-opacity: rgba(255, 255, 255, 0.1);
     --color-txt-2: #A8D1CD;
 
+/* Gradient */
+ 
+
 
     --border-1: 0.5px solid rgba(255, 255, 255, 0.1);
 
@@ -24,8 +27,14 @@
 }
 
 
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
 body {
-    background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-txt-2) 60%);
+    background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-bg-dark-plus) 60%, var(--color-bg-dark-extra) 80%);
     height: 100vh;
     font-family: var(--font-headings);
 }

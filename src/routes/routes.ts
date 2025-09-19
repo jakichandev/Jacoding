@@ -2,6 +2,7 @@ import homeIcon from '../assets/svg/home.svg';
 import portfolioIcon from '../assets/svg/portfolio.svg';
 import collaborateIcon from '../assets/svg/collaborate.svg';
 import contactsIcon from '../assets/svg/contacts.svg';
+import profileIcon from '../assets/svg/profile.svg';
 
 
 
@@ -20,6 +21,12 @@ export const routes : routeInterface[] = [
         name: "Homepage",
         id: 1,
         icon: homeIcon
+    },
+    {
+        path: "/profile",
+        name: "Profile",
+        id: 5,
+        icon: profileIcon
     },
     {
         path: "/portfolio",
