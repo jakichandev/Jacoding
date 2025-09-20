@@ -8,7 +8,7 @@ const Navbar = ({ navState = "sm" }) => {
   return (
     <nav
       onClick={() => setNavState(navActualState === "sm" ? "lg" : "sm")}
-      className={`relative rounded-lg border-1 px-2 border-opacity ml-3 mt-3 overflow-hidden flex flex-col items-center animate-navbar transition-all duration-500 overflow-y-auto ${
+      className={`relative rounded-lg border-1 px-2 border-opacity ml-3 mt-3 overflow-hidden flex flex-col items-center animate-navbar transition-all duration-500 overflow-y-auto cursor-pointer ${
         navActualState === "sm" ? "w-28 relative" : "w-64 h-80 justify-normal absolute"}`}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-txt-2 via-bg-dark-extra to-txt -z-10 blur-lg opacity-40"></div>
