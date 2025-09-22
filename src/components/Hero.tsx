@@ -1,45 +1,58 @@
 import Button from "./Button";
+import GlassContainer from "./GlassContainer";
 
 interface HeadingInterface {
   text: string;
   sizes: {
-    sm:string;
+    sm: string;
     lg: string;
-  }
+  };
 }
 
-const Heading = ({text, sizes}:HeadingInterface) => {
+const Heading = ({ text, sizes }: HeadingInterface) => {
   return (
-    <h2 className={`uppercase font-medium text-${sizes.sm} sm:text-${sizes.lg}`}>{text}</h2>
-  )
-}
+    <h2 className={`uppercase font-medium ${sizes.sm} sm:${sizes.lg}`}>
+      {text}
+    </h2>
+  );
+};
 
 const Hero = () => {
   return (
-    <section id="hero-section">
-      <div className="relative mx-sections my-5 rounded-lg border-1 border-opacity overflow-hidden">
-        <div className="">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-bg-dark-extra via-txt-2 from-30% to-60% to-bg-dark-extra -z-10 blur-2xl opacity-80"></div>
-          <div className="text-txt rounded-lg p-5 mx-2.5 text-center flex flex-col items-center">
-           <Heading text={'I\'m Jacopo'} sizes={{sm: "7xl", lg:"8xl"}}/>
-           <Heading text={'frontend'} sizes={{sm: "7xl", lg:"8xl"}}/>
-           <Heading text={'developer'} sizes={{sm: "7xl", lg:"8xl"}}/>
-          </div>
-        </div>
+    <section className="flex flex-col md:flex-row max-h-[880px]" id="hero-section">
+      <GlassContainer opacity={"60"} className={`my-2`}>
+        <img className="w-full relative -z-30" src="me.JPG"></img>
 
-        <div className="p-5 m-2.5 flex flex-col items-center justify-center">
-          <p className="text-txt text-2xl text-center font-bold font-code">
+        <div className="text-txt mx-2.5 text-center flex flex-col items-center absolute z-20 w-full h-full top-[50%] left-0">
+          <Heading
+            text={"I'm Jacopo"}
+            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+          />
+          <Heading
+            text={"frontend"}
+            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+          />
+          <Heading
+            text={"developer"}
+            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+          />
+        </div>
+      </GlassContainer>
+
+      <GlassContainer className={"my-2"}>
+        <div className="p-5 m-2.5 flex flex-col items-center justify-center relative z-10">
+          <p className="text-txt text-lg text-center font-bold font-p-1">
             scrivo siti web, applicazioni e progetto interfacce innovative
           </p>
         </div>
 
-        <div className="p-5 m-2.5 flex flex-col justify-center">
+        <div className="p-5 m-2.5 flex flex-col justify-center relative z-10">
           <Button
             text="Iniziamo a sviluppare"
-            dimensions={{ width: "32", height: "10" }}
+            dimensions={{ width: "32", height: "26" }}
           />
         </div>
-      </div>
+      </GlassContainer>
     </section>
   );
 };
