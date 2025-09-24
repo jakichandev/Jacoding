@@ -39,7 +39,7 @@ export const FormField = ({
         <textarea name={name} onChange={(evt) => setFormValues({
           ...formValues,
           [name]: evt.target.value
-        })} rows={4} className="bg-txt-2 rounded-lg p-2"></textarea>
+        })} rows={4} className="bg-txt-2 rounded-lg p-2 text-bg-dark"></textarea>
       </div>
     );
   }

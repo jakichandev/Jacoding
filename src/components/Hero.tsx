@@ -3,15 +3,12 @@ import GlassContainer from "./GlassContainer";
 
 interface HeadingInterface {
   text: string;
-  sizes: {
-    sm: string;
-    lg: string;
-  };
+  className: string;
 }
 
-const Heading = ({ text, sizes }: HeadingInterface) => {
+export const Heading = ({ text, className }: HeadingInterface) => {
   return (
-    <h2 className={`uppercase font-medium ${sizes.sm} sm:${sizes.lg}`}>
+    <h2 className={`uppercase font-semibold font-headings-2 ${className}`}>
       {text}
     </h2>
   );
@@ -26,15 +23,15 @@ const Hero = () => {
         <div className="text-txt mx-2.5 text-center flex flex-col items-center absolute z-20 w-full h-full top-[50%] left-0">
           <Heading
             text={"I'm Jacopo"}
-            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+            className={"text-6xl sm:text-9xl"}
           />
           <Heading
             text={"frontend"}
-            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+             className={"text-6xl sm:text-9xl"}
           />
           <Heading
             text={"developer"}
-            sizes={{ sm: "text-6xl", lg: "text-8xl" }}
+             className={"text-6xl sm:text-9xl"}
           />
         </div>
       </GlassContainer>

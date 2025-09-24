@@ -50,6 +50,7 @@ body {
     background-position: center;
     background-size: cover;
     background-blend-mode:darken;
+    background-repeat: no-repeat;
     height: 100vh;
     font-family: var(--font-headings-2);
 }
