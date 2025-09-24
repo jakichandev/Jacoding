@@ -1,9 +1,11 @@
 import  { useRoutes } from 'react-router';
 import App from '../App';
+import Collaborate from '../pages/Collaborate';
 
 const routings = [
     { path: "/", element: <App /> },
     { path: "/check", element: <div>Check Page</div> },
+    { path: "/collaborate", element: <Collaborate /> },
     { path: "*", element: <div>Not Found</div> }
   ]
 
