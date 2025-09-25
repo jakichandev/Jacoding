@@ -2,7 +2,6 @@ import GlassContainer from "./GlassContainer";
 import { Heading } from "./Hero";
 import Button from "./Button";
 import { Link } from "react-router";
-import { useEffect, useRef } from "react";
 
 interface CardData {
   label: string;
