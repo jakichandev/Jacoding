@@ -132,8 +132,7 @@ export const Form = () => {
         />
         <Button
           text={"Iniziamo!"}
-          dimensions={{ width: "full", height: "18" }}
-          className="my-6 w-full"
+          className="my-6 w-full h-18"
         />
       </form>
     </GlassContainer>

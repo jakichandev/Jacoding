@@ -46,7 +46,7 @@ const Hero = () => {
         <div className="p-5 m-2.5 flex flex-col justify-center relative z-10">
           <Button
             text="Iniziamo a sviluppare"
-            dimensions={{ width: "32", height: "26" }}
+            className="w-26 h-18"
           />
         </div>
       </GlassContainer>
