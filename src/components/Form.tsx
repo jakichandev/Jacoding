@@ -77,8 +77,8 @@ export const Form = () => {
     console.log(formValues)
   }, [formValues])
   return (
-    <GlassContainer className="h-full w-full flex flex-col items-center px-8 py-18">
-      <form className="w-full sm:w-1/2 text-white relative z-20 font-p-1">
+    <GlassContainer className="w-full h-full flex flex-col items-center px-8 py-18 mt-2">
+      <form className=" text-white relative z-20 font-p-1 w-4/5">
         <h3 className="uppercase font-headings text-4xl my-4 font-bold">Collaboriamo</h3>
         <FormField
           name={"name"}
@@ -133,7 +133,7 @@ export const Form = () => {
         <Button
           text={"Iniziamo!"}
           dimensions={{ width: "full", height: "18" }}
-          className="my-6"
+          className="my-6 w-full"
         />
       </form>
     </GlassContainer>

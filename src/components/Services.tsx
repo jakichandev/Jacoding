@@ -2,6 +2,7 @@ import GlassContainer from "./GlassContainer";
 import { Heading } from "./Hero";
 import Button from "./Button";
 import { Link } from "react-router";
+import { useEffect, useRef } from "react";
 
 interface CardData {
   label: string;
@@ -13,19 +14,19 @@ interface CardData {
 const cards: CardData[] = [
   {
     label: "Siti web",
-    img: "./img.png",
+    img: "website.jpg",
     link: "/services/websites",
     desc: "Siti web sviluppati con le migliori tecnologie presenti sul mercato",
   },
   {
     label: "Web Applications",
-    img: "./img.png",
+    img: "applications.jpg",
     link: "/sevices/webapplications",
     desc: "Applicazioni strutturate per funzionare su un browser web come gestionali, dashboards, social network",
   },
   {
     label: "Templates",
-    img: "./img.png",
+    img: "./templates.jpg",
     link: "/services/templates",
     desc: "Template pronti e facilmente integrabili per sviluppatori",
   },
@@ -34,14 +35,29 @@ const cards: CardData[] = [
 export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
   return (
     <GlassContainer
-      className="p-7 w-[100vw] [&>*]:relative [&>*]:z-20"
+      className="box-border h-[25rem] sm:w-[26rem] sm:h-[26rem] p-2.5 shrink-0 snap-center"
       key={index}
     >
-      <div className="absolute">
-        <Heading className="text-3xl text-txt" text={label}></Heading>
-        <p className="font-p-1">{desc}</p>
-        <img src={img} />
-        <Link to={link}>
+      <div className="relative z-20 h-full w-[350px]">
+        <Heading
+          className="text-3xl text-white bg-cover"
+          text={label}
+        ></Heading>
+        <div
+          style={{
+            background: `url("${img}")`,
+            backgroundSize: "cover",
+          }}
+          className={`w-48 h-48 rounded-full mx-auto border-2 border-opacity`}
+        ></div>
+        
+        
+          <p className="w-4/5 mx-auto font-p-1 text-white text-center my-8 whitespace-break-spaces text-sm font-bold">
+            {desc}
+          </p>
+        
+
+        <Link to={link} className=" absolute top-[88%] w-full">
           <Button text="Approfondiamo" className="w-full h-10"></Button>
         </Link>
       </div>
@@ -51,22 +67,26 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
 
 export const Services = () => {
   return (
-    <section className="bg-bg-dark-extra py-20 overflow-x-hidden">
-      <div className="mx-sections text-center box-border">
-        <Heading
-          text="Studio, sviluppo e ottimizzo"
-          className="text-4xl sm:text-5xl text-txt my-8"
-        ></Heading>
-        <div className="w-[300vw] overflow-x-scroll">
-        {cards.map((card, index) => (
-          <ServiceCard
-            label={card.label}
-            img={card.img}
-            link={card.link}
-            desc={card.desc}
-            index={index}
-          />
-        ))}
+    <section className="bg-bg-dark-extra px-sections-mobile sm:px-sections py-18">
+      <Heading
+        text="Studio, sviluppo e ottimizzo"
+        className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center"
+      ></Heading>
+      <p className="font-p-1 text-txt text-center">
+        con l' utilizzo di tecnologie moderne realizzo prodotti digitali su
+        misura per ogni tua esigenza
+      </p>
+      <div className="overflow-x-auto w-full my-8">
+        <div className="flex justify-center sm:justify-center whitespace-nowrap gap-8 w-[1200px] sm:w-auto">
+          {cards.map((card, index) => (
+            <ServiceCard
+              label={card.label}
+              img={card.img}
+              link={card.link}
+              desc={card.desc}
+              index={index}
+            />
+          ))}
         </div>
       </div>
     </section>

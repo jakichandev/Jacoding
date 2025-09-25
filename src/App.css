@@ -22,7 +22,8 @@
  
 
     /* Spacings */
-    --spacing-sections: 1rem;
+    --spacing-sections: 8rem;
+    --spacing-sections-mobile: 1.5rem;
 
     /* Sizes */
     --size-hero: 90vh;

@@ -16,22 +16,22 @@ export const Heading = ({ text, className }: HeadingInterface) => {
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row max-h-[880px]" id="hero-section">
+    <section className="px-sections-mobile sm:px-sections flex flex-col md:flex-row max-h-[880px] box-border" id="hero-section">
       <GlassContainer opacity={"60"} className={`my-2`}>
         <img className="w-full relative -z-30" src="me.JPG"></img>
 
         <div className="text-txt mx-2.5 text-center flex flex-col items-center absolute z-20 w-full h-full top-[50%] left-0">
           <Heading
             text={"I'm Jacopo"}
-            className={"text-6xl sm:text-9xl"}
+            className={"text-6xl sm:text-7xl"}
           />
           <Heading
             text={"frontend"}
-             className={"text-6xl sm:text-9xl"}
+             className={"text-6xl sm:text-7xl"}
           />
           <Heading
             text={"developer"}
-             className={"text-6xl sm:text-9xl"}
+             className={"text-6xl sm:text-7xl"}
           />
         </div>
       </GlassContainer>

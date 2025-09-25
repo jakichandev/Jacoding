@@ -5,7 +5,7 @@ const Collaborate = () => {
     return (
         <>
         <Navbar />
-        <section className="w-screen h-[80vh] my-2 flex items-center justify-center">
+        <section className="h-[80vh] my-2 flex items-center justify-center mx-sections-mobile sm:mx-sections">
         <Form />
         </section>
         </>
