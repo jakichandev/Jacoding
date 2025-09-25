@@ -47,7 +47,7 @@
 
 body {
     /* background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-bg-dark-plus) 60%, var(--color-bg-dark-extra) 80%); */
-    background: url("hero_image_3.jpg");
+    background: url("/hero_image_3.jpg");
     background-position: center;
     background-size: cover;
     background-blend-mode:darken;
