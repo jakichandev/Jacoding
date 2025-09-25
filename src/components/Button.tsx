@@ -7,7 +7,7 @@ interface ButtonInterface {
   className?: string;
 }
 
-const Button = ({ text, dimensions, className }: ButtonInterface) => {
+const Button = ({ text, className }: ButtonInterface) => {
   return (
     <button
       className={`font-headings-2  text-txt px-3 py-1.5 text-4xl uppercase rounded-lg border-opacity border-1 relative overflow-hidden flex items-center justify-center ${className}`}

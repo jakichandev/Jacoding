@@ -16,7 +16,7 @@ export const Heading = ({ text, className }: HeadingInterface) => {
 
 const Hero = () => {
   return (
-    <section className="px-sections-mobile sm:px-sections flex flex-col md:flex-row max-h-[880px] box-border" id="hero-section">
+    <section className="px-sections-mobile md:px-sections flex flex-col max-h-[880px] box-border py-4" id="hero-section">
       <GlassContainer opacity={"60"} className={`my-2`}>
         <img className="w-full relative -z-30" src="me.JPG"></img>
 
@@ -36,20 +36,20 @@ const Hero = () => {
         </div>
       </GlassContainer>
 
-      <GlassContainer className={"my-2"}>
-        <div className="p-5 m-2.5 flex flex-col items-center justify-center relative z-10">
-          <p className="text-txt text-lg text-center font-bold font-p-1">
-            scrivo siti web, applicazioni e progetto interfacce innovative
+     
+        <div className="m-2.5 flex flex-col items-center justify-center relative z-10">
+          <p className="text-txt text-lg text-center font-normal font-p-1">
+           creo interfacce moderne, user-friendly e responsive
           </p>
         </div>
 
-        <div className="p-5 m-2.5 flex flex-col justify-center relative z-10">
+        <div className="m-2.5 flex flex-col justify-center relative z-10">
           <Button
             text="Iniziamo a sviluppare"
-            dimensions={{ width: "32", height: "26" }}
+            className={"sm:w-3/4 h-18 txt-sm sm:mx-auto"}
           />
         </div>
-      </GlassContainer>
+
     </section>
   );
 };
