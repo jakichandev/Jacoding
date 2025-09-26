@@ -15,7 +15,7 @@ const cards: CardData[] = [
     label: "Siti web",
     img: "website.jpg",
     link: "/services/websites",
-    desc: "Siti web sviluppati con le migliori tecnologie presenti sul mercato",
+    desc: "Siti web User-friendly, moderni e responsive",
   },
   {
     label: "Web Applications",
@@ -55,7 +55,7 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
         </p>
 
         <Link to={link} className="absolute bottom-0 w-full z-30">
-          <Button text="Approfondiamo" className="w-full h-10 text-xl text-white border-2 border-opacity"></Button>
+          <Button text="Maggiori dettagli" className="w-full h-10 text-xl text-white border-2 border-opacity"></Button>
         </Link>
       </div>
     </GlassContainer>
@@ -64,17 +64,16 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
 
 export const Services = () => {
   return (
-    <section className="bg-bg-dark-extra px-sections-mobile md:px-sections py-18 w-full">
+    <section className="bg-bg-dark-extra px-sections-mobile md:px-sections py-22 w-full">
       <Heading
-        text="Studio, sviluppo e ottimizzo"
-        className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center"
+        text="Ecco cosa faccio"
+        className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center m-0"
       ></Heading>
-      <p className="font-p-1 text-txt text-center">
-        con l' utilizzo di tecnologie moderne realizzo prodotti digitali su
-        misura per ogni tua esigenza
+      <p className="text-xl font-p-1 text-txt text-center font-medium italic">
+        con le migliori tecnologie sul mercato
       </p>
       <div className="overflow-x-auto w-full my-8 p-4">
-        <div className="flex justify-center whitespace-nowrap gap-8 w-[1100px]">
+        <div className="mx-auto flex justify-center whitespace-nowrap gap-8 w-[1100px]">
           {cards.map((card, index) => (
             <ServiceCard
               label={card.label}
