@@ -8,7 +8,7 @@ interface HeadingInterface {
 
 export const Heading = ({ text, className }: HeadingInterface) => {
   return (
-    <h2 className={`uppercase font-semibold font-headings-2 ${className}`}>
+    <h2 className={`uppercase font-headings-2 ${className}`}>
       {text}
     </h2>
   );
