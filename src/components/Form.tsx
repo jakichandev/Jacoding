@@ -1,6 +1,7 @@
 import Button from "./Button";
 import GlassContainer from "./GlassContainer";
-import { useEffect, useState } from "react";
+import {Heading} from "./Hero";
+import { useState } from "react";
 
 export interface FormValues {
   name: string;
@@ -36,10 +37,17 @@ export const FormField = ({
     return (
       <div className={twStyle}>
         <label className="font-bold">{label}</label>
-        <textarea name={name} onChange={(evt) => setFormValues({
-          ...formValues,
-          [name]: evt.target.value
-        })} rows={4} className="bg-txt-2 rounded-lg p-2 text-bg-dark"></textarea>
+        <textarea
+          name={name}
+          onChange={(evt) =>
+            setFormValues({
+              ...formValues,
+              [name]: evt.target.value,
+            })
+          }
+          rows={4}
+          className="bg-txt-2 rounded-lg p-2 text-bg-dark"
+        ></textarea>
       </div>
     );
   }
@@ -47,7 +55,7 @@ export const FormField = ({
     <div className={twStyle}>
       <label className="font-bold">{label}</label>
       <input
-        className="bg-txt-2 p-2 rounded-lg border-2 border-opacity text-bg-dark font-medium"
+        className="bg-txt-2 py-1.5 px-5 rounded-lg border-2 border-opacity text-bg-dark font-medium"
         id={id}
         name={name}
         type={inputType}
@@ -64,7 +72,6 @@ export const FormField = ({
 };
 
 export const Form = () => {
-
   const [formValues, setFormValues] = useState<FormValues>({
     name: "",
     surname: "",
@@ -73,13 +80,11 @@ export const Form = () => {
     textBody: "",
   });
 
-    useEffect(() => {
-    console.log(formValues)
-  }, [formValues])
   return (
-    <GlassContainer className="w-full h-full flex flex-col items-center px-8 py-18 mt-2">
-      <form className=" text-white relative z-20 font-p-1 w-4/5">
-        <h3 className="uppercase font-headings text-4xl my-4 font-bold">Collaboriamo</h3>
+    <GlassContainer className="w-full flex flex-col items-center px-5">
+      <Heading text="collaboriamo" className="text-4xl z-20 text-white my-3"/>
+      <form className=" text-white relative z-20 font-p-1 w-full">
+        
         <FormField
           name={"name"}
           label={"Nome"}
@@ -88,7 +93,7 @@ export const Form = () => {
           inputType={"text"}
           setFormValues={setFormValues}
           formValues={formValues}
-          twStyle="flex flex-col gap-1"
+          twStyle="flex flex-col gap-1.5"
         />
         <FormField
           name={"surname"}
@@ -98,7 +103,7 @@ export const Form = () => {
           inputType={"text"}
           setFormValues={setFormValues}
           formValues={formValues}
-          twStyle="flex flex-col gap-1 mt-2"
+          twStyle="flex flex-col gap-1 my-3"
         />
         <FormField
           name={"mail"}
@@ -108,7 +113,7 @@ export const Form = () => {
           inputType={"mail"}
           setFormValues={setFormValues}
           formValues={formValues}
-          twStyle="flex flex-col gap-1 mt-2"
+          twStyle="flex flex-col gap-1 my-3"
         />
         <FormField
           name={"telephoneNumber"}
@@ -118,7 +123,7 @@ export const Form = () => {
           inputType={"tel"}
           setFormValues={setFormValues}
           formValues={formValues}
-          twStyle="flex flex-col gap-1 mt-2"
+          twStyle="flex flex-col gap-1 my-3"
         />
         <FormField
           name={"textBody"}
@@ -132,8 +137,7 @@ export const Form = () => {
         />
         <Button
           text={"Iniziamo!"}
-          dimensions={{ width: "full", height: "18" }}
-          className="my-6 w-full"
+          className="my-6 w-full text-3xl"
         />
       </form>
     </GlassContainer>
