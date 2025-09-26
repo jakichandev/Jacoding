@@ -1,6 +1,6 @@
 import Button from "./Button";
 import GlassContainer from "./GlassContainer";
-import {Heading} from "./Hero";
+import { Heading } from "./Hero";
 import { useState } from "react";
 
 export interface FormValues {
@@ -82,9 +82,8 @@ export const Form = () => {
 
   return (
     <GlassContainer className="w-full flex flex-col items-center px-5">
-      <Heading text="collaboriamo" className="text-4xl z-20 text-white my-3"/>
+      <Heading text="collaboriamo" className="text-4xl z-20 text-white my-3" />
       <form className=" text-white relative z-20 font-p-1 w-full">
-        
         <FormField
           name={"name"}
           label={"Nome"}
@@ -135,10 +134,7 @@ export const Form = () => {
           formValues={formValues}
           twStyle="flex flex-col gap-1 mt-2"
         />
-        <Button
-          text={"Iniziamo!"}
-          className="my-6 w-full text-3xl"
-        />
+        <Button text={"Iniziamo!"} className="my-6 w-full text-3xl" />
       </form>
     </GlassContainer>
   );

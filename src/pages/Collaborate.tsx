@@ -4,8 +4,8 @@ import { Form } from "../components/Form"
 const Collaborate = () => {
     return (
         <>
-        <Navbar />
-        <section className="relative h-[80vh] my-6 flex items-center justify-center mx-sections-mobile sm:mx-sections">
+        <Navbar navState="sm" />
+        <section className="px-sections-mobile md:px-sections py-6 box-border">
         <Form />
         </section>
         </>
