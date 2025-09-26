@@ -63,7 +63,7 @@ body {
 }
 
 #overlay-bg {
-    filter: saturate(0.3);
+    filter: blur(1.5px);
     opacity: 0.2;
 }
 
