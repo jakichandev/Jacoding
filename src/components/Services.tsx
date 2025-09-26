@@ -3,7 +3,7 @@ import { Heading } from "./Hero";
 import Button from "./Button";
 import { Link } from "react-router";
 
-interface CardData {
+export interface CardData {
   label: string;
   img: string;
   desc?: string;
@@ -49,15 +49,13 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
           }}
           className={`w-48 h-48 rounded-full mx-auto border-2 border-opacity`}
         ></div>
-        
-        
-          <p className="w-4/5 mx-auto font-p-1 text-white text-center my-8 whitespace-break-spaces text-sm font-bold">
-            {desc}
-          </p>
-        
+
+        <p className="w-4/5 mx-auto font-p-1 text-white text-center my-8 whitespace-break-spaces text-sm font-bold">
+          {desc}
+        </p>
 
         <Link to={link} className=" absolute top-[88%] w-full">
-          <Button text="Approfondiamo" className="w-full h-10"></Button>
+          <Button text="Approfondiamo" className="w-full h-10 text-xl text-white border-2 border-opacity"></Button>
         </Link>
       </div>
     </GlassContainer>
@@ -75,7 +73,7 @@ export const Services = () => {
         con l' utilizzo di tecnologie moderne realizzo prodotti digitali su
         misura per ogni tua esigenza
       </p>
-      <div className="overflow-x-auto w-full my-8">
+      <div className="overflow-x-auto w-full my-8 p-4">
         <div className="flex justify-center sm:justify-center whitespace-nowrap gap-8 w-[1200px] sm:w-auto">
           {cards.map((card, index) => (
             <ServiceCard
