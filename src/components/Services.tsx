@@ -34,12 +34,12 @@ const cards: CardData[] = [
 export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
   return (
     <GlassContainer
-      className="box-border h-[25rem] sm:w-[26rem] sm:h-[26rem] p-2.5 shrink-0 snap-center"
+      className="box-border p-2.5 shrink-0 snap-center w-[22rem] border-2 border-opacity h-full"
       key={index}
     >
-      <div className="relative z-20 h-full w-[350px]">
+      <div className="relative z-20 h-[25rem]">
         <Heading
-          className="text-3xl text-white bg-cover"
+          className="text-4xl text-white bg-cover"
           text={label}
         ></Heading>
         <div
@@ -47,14 +47,14 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
             background: `url("${img}")`,
             backgroundSize: "cover",
           }}
-          className={`w-48 h-48 rounded-full mx-auto border-2 border-opacity`}
+          className={`w-48 h-48 rounded-full mx-auto my-4 bg-center inset-shadow-sm inset-shadow-txt`}
         ></div>
 
-        <p className="w-4/5 mx-auto font-p-1 text-white text-center my-8 whitespace-break-spaces text-sm font-bold">
+        <p className="mx-auto font-p-1 text-white text-center my-7 whitespace-break-spaces text-sm font-bold">
           {desc}
         </p>
 
-        <Link to={link} className=" absolute top-[88%] w-full">
+        <Link to={link} className="absolute bottom-0 w-full z-30">
           <Button text="Approfondiamo" className="w-full h-10 text-xl text-white border-2 border-opacity"></Button>
         </Link>
       </div>
@@ -64,7 +64,7 @@ export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
 
 export const Services = () => {
   return (
-    <section className="bg-bg-dark-extra px-sections-mobile sm:px-sections py-18">
+    <section className="bg-bg-dark-extra px-sections-mobile md:px-sections py-18 w-full">
       <Heading
         text="Studio, sviluppo e ottimizzo"
         className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center"
@@ -74,7 +74,7 @@ export const Services = () => {
         misura per ogni tua esigenza
       </p>
       <div className="overflow-x-auto w-full my-8 p-4">
-        <div className="flex justify-center sm:justify-center whitespace-nowrap gap-8 w-[1200px] sm:w-auto">
+        <div className="flex justify-center whitespace-nowrap gap-8 w-[1100px]">
           {cards.map((card, index) => (
             <ServiceCard
               label={card.label}

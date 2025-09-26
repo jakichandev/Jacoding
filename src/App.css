@@ -14,6 +14,7 @@
     --color-bg-dark: #3c3c3b;
     --color-bg-dark-plus: #292927;
     --color-bg-dark-extra: #0B0B0A;
+    --color-bg-dark-opacity: rgba(11, 11, 10, 0.65);
     --color-important: #FCC0A5;
     --color-opacity: rgba(255, 255, 255, 0.1);
     --color-txt-2: #A8D1CD;
