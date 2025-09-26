@@ -41,17 +41,19 @@ const techStack: TechStack = {
 
 const TechSkill = ({ techs, label }: Techs) => {
   return (
-    <article className="my-22">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center justify-center place-content-center text-center">
+    <article className="my-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center place-content-center text-center">
         <Heading
           text={label}
           className="font-p-1 text-3xl font-extrabold text-white my-6 md:my-auto md:mr-10"
         />
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-5 gap-y-4 w-5/6 md:w-full mx-auto">
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4">
           {techs.map((tech, index) => (
-            <li key={index} className="flex items-center my-1.5 ">
-              <img src={tech.icon} alt={tech.name} className="w-10 h-10 mr-4" />
-              <span className="text-white text-xl font-p-1 font-bold">{tech.name}</span>
+            <li key={index} className="flex items-center my-1.5">
+              <img src={tech.icon} alt={tech.name} className="w-10 h-10 mr-2" />
+              <span className="text-white text-lg font-p-1 font-bold">
+                {tech.name}
+              </span>
             </li>
           ))}
         </ul>
@@ -64,8 +66,10 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-bg-dark-plus py-22 px-sections-mobile md:px-sections"
+      className="bg-gradient-to-b bg-bg-dark-extra py-22 px-sections-mobile md:px-sections relative z-10 overflow-hidden"
     >
+      <div id="overlay-bg" className="absolute bg-[url('/section_background.jpg')] inset-0 w-full h-full z-0 opacity-100 overflow-hidden bg-cover bg-center rotate-180"></div>
+      <div className="relative z-50">
       <Heading
         text="Quali tecnologie utilizzo?"
         className="text-center text-5xl text-txt"
@@ -77,6 +81,7 @@ export const Skills = () => {
         />
         <TechSkill label="Frameworks" techs={techStack.frameworks} />
         <TechSkill label="Tools" techs={techStack.tools} />
+      </div>
       </div>
     </section>
   );
