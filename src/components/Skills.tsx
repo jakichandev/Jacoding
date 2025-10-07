@@ -1,9 +1,6 @@
 import { Heading } from "./Hero";
+import type { Tech } from "../types/Tech/Tech";
 
-interface Tech {
-  name: string;
-  icon: string;
-}
 
 interface TechStack {
   programmingLangs: Tech[];
