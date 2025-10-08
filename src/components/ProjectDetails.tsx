@@ -1,8 +1,7 @@
-import { useParams, type NavigateOptions, type To } from "react-router";
+import { useNavigate, useParams, type NavigateOptions, type To } from "react-router-dom";
 import { projects } from "../data/projects";
 import { useEffect, useState } from "react";
 import type { Project } from "../types/Project/Project";
-import { useNavigate } from "react-router";
 import { Heading } from "./Hero";
 import Button from "./Button";
 import GlassContainer from "./GlassContainer";

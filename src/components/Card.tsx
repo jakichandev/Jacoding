@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { Heading } from "./Hero";
 import GlassContainer from "./GlassContainer";
 import type { Project } from "../types/Project/Project";

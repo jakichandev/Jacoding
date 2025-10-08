@@ -1,7 +1,7 @@
 import GlassContainer from "./GlassContainer";
 import { Heading } from "./Hero";
 import Button from "./Button";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export interface CardData {
   label: string;

@@ -1,6 +1,6 @@
 import Logo from "./Logo";
 import { useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import { routes } from "../routes/routes";
 import instagram from "../assets/svg/instagram.svg"
 import github from "../assets/svg/github.svg"
