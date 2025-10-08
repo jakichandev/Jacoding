@@ -2,36 +2,10 @@ import GlassContainer from "./GlassContainer";
 import { Heading } from "./Hero";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import type { Service } from "../types/Service/Service";
+import { services } from "../data/services";
 
-export interface CardData {
-  label: string;
-  img: string;
-  desc?: string;
-  link: string;
-  index?: number;
-}
-const cards: CardData[] = [
-  {
-    label: "Siti web",
-    img: "website.jpg",
-    link: "/services/websites",
-    desc: "Siti web User-friendly, moderni e responsive",
-  },
-  {
-    label: "Web Applications",
-    img: "applications.jpg",
-    link: "/sevices/webapplications",
-    desc: "Applicazioni strutturate per funzionare su un browser web come gestionali, dashboards, social network",
-  },
-  {
-    label: "Templates",
-    img: "./templates.jpg",
-    link: "/services/templates",
-    desc: "Template pronti e facilmente integrabili per sviluppatori",
-  },
-];
-
-export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
+export const ServiceCard = ({ label, img, desc, link, index }: Service) => {
   return (
     <GlassContainer
       className="relative box-border p-2.5 shrink-0 snap-center w-[22rem] border-2 border-opacity h-full"
@@ -74,7 +48,7 @@ export const Services = () => {
       </p>
       <div className="overflow-x-auto w-full my-8 p-4">
         <div className="mx-auto flex justify-center whitespace-nowrap gap-8 w-[1100px]">
-          {cards.map((card, index) => (
+          {services.map((card, index) => (
             <ServiceCard
               label={card.label}
               img={card.img}

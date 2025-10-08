@@ -20,9 +20,15 @@ export const Portfolio = () => {
           </div>
         </div>
         <main className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-2">
-            {projects.map((project) => (
-                <ProjectCard label={project["label"]} body={project["body"]} image={project["image"]} stack={project["stack"]} links={project["links"]} />
-            ))}
+          {projects.map((project) => (
+            <ProjectCard
+              label={project["label"]}
+              body={project["body"]}
+              image={project["image"]}
+              stack={project["stack"]}
+              links={project["links"]}
+            />
+          ))}
         </main>
       </section>
       <div>
