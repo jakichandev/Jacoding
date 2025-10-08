@@ -1,80 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Manrope:wght@200..800&family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap');
-@import 'tailwindcss';
-
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Manrope:wght@200..800&family=Oswald:wght@200..700&family=SUSE+Mono:ital,wght@0,100..800;1,100..800&display=swap");
+@import "tailwindcss";
 
 @theme {
-    /* Fonts */
-    --font-headings: 'Oswald', sans-serif;
-    --font-headings-2: "Antonio", sans-serif;
-    --font-code: 'SUSE Mono', sans-serif;
-    --font-p-1: 'Manrope', sans-serif;
-    
-    /* Colors */
-    --color-txt: #85ece2;
-    --color-bg-dark: #3c3c3b;
-    --color-bg-dark-plus: #292927;
-    --color-bg-dark-extra: #0B0B0A;
-    --color-bg-dark-opacity: rgba(11, 11, 10, 0.65);
-    --color-important: #FCC0A5;
-    --color-opacity: rgba(255, 255, 255, 0.1);
-    --color-txt-2: #A8D1CD;
+  /* Fonts */
+  --font-headings: "Oswald", sans-serif;
+  --font-headings-2: "Antonio", sans-serif;
+  --font-code: "SUSE Mono", sans-serif;
+  --font-p-1: "Manrope", sans-serif;
 
-    /* Gradient */
- 
+  /* Colors */
+  --color-txt: #85ece2;
+  --color-bg-dark: #3c3c3b;
+  --color-bg-dark-plus: #292927;
+  --color-bg-dark-extra: #0b0b0a;
+  --color-bg-dark-opacity: rgba(11, 11, 10, 0.65);
+  --color-important: #fcc0a5;
+  --color-opacity: rgba(255, 255, 255, 0.1);
+  --color-txt-2: #a8d1cd;
 
-    /* Spacings */
-    --spacing-sections: 8rem;
-    --spacing-sections-mobile: 1.5rem;
+  /* Gradient */
 
-    /* Sizes */
-    --size-hero: 90vh;
+  /* Spacings */
+  --spacing-sections: 8rem;
+  --spacing-sections-mobile: 1.5rem;
 
+  /* Sizes */
+  --size-hero: 90vh;
 
-    --border-1: 0.5px solid rgba(255, 255, 255, 0.1);
+  --border-1: 0.5px solid rgba(255, 255, 255, 0.1);
 
-    /* Animations */
-    --animate-navbar: navbar 5000ms ease-in-out forwards infinite;
+  /* Animations */
+  --animate-navbar: navbar 5000ms ease-in-out forwards infinite;
+  --animate-open: open 300ms ease-in;
+  --animate-close: open 300ms ease-in reverse;
 
-    /* Transitions */
-    --transition-navbar: all 400ms ease-in-out;
+  /* Transitions */
+  --transition-navbar: all 400ms ease-in-out;
 }
-
-
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
-
 
 body {
-    /* background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-bg-dark-plus) 60%, var(--color-bg-dark-extra) 80%); */
-    background: url("/hero_image_3.jpg");
-    background-position: center;
-    background-size: cover;
-    background-blend-mode:darken;
-    background-repeat: no-repeat;
-    height: 100vh;
-    font-family: var(--font-headings-2);
+  /* background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-bg-dark-plus) 60%, var(--color-bg-dark-extra) 80%); */
+  background: url("/hero_image_3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: var(--font-headings-2);
 }
 
-
 .icon-btn {
-    @apply absolute w-full h-full top-0 left-0 via-20% bg-gradient-to-b from-txt via-bg-dark-plus to-txt z-10 opacity-50;
+  @apply absolute w-full h-full top-0 left-0 via-20% bg-gradient-to-b from-txt via-bg-dark-plus to-txt z-10 opacity-50;
 }
 
 #overlay-bg {
-    filter: blur(1.5px);
-    opacity: 0.2;
+  filter: blur(1.5px);
+  opacity: 0.2;
 }
 
-
-
 @keyframes navbar {
-    0%, 100% {
-        transform: scale(1);
-    }
-    85% {
-        transform: scale(1.02);
-    }
-   
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  85% {
+    transform: scale(1.02);
+  }
+}
+
+@keyframes open {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }

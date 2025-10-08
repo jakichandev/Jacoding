@@ -10,7 +10,7 @@ export const Portfolio = () => {
     <>
       <Navbar navState="sm" />
       <section className="px-sections-mobile md:px-sections py-22 box-border">
-        <Heading text="Portofolio" className="text-txt text-6xl" />
+        <Heading text="Portfolio" className="text-txt text-6xl" />
         <div className="flex gap-4 my-4">
           <h3 className="text-txt text-2xl font-p-1">Filtri</h3>
           <div className="flex gap-x-1.5">

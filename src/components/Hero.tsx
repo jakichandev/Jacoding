@@ -2,7 +2,7 @@ import Button from "./Button";
 import GlassContainer from "./GlassContainer";
 
 interface HeadingInterface {
-  text: string;
+  text?: string;
   className: string;
 }
 
@@ -20,7 +20,7 @@ const Hero = () => {
       className="px-sections-mobile md:px-sections flex flex-col max-h-[880px] box-border py-4"
       id="hero-section"
     >
-      <GlassContainer opacity={"60"} className={`my-2`}>
+      <GlassContainer opacity={"60"} className={`relative my-2`}>
         <img className="w-full relative -z-30" src="me.JPG"></img>
 
         <div className="text-txt mx-2.5 text-center flex flex-col items-center absolute z-20 w-full h-full top-[50%] left-0">

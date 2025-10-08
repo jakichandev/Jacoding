@@ -2,6 +2,7 @@ import  { useRoutes } from 'react-router';
 import App from '../App';
 import Collaborate from '../pages/Collaborate';
 import { Portfolio } from '../pages/Portfolio';
+import { ProjectDetails } from '../components/ProjectDetails';
 
 const routings = [
     { path: "/", element: <App /> },
@@ -10,7 +11,7 @@ const routings = [
     { path: "portfolio", element: <Portfolio />, children: [
       {
         path: ":label",
-        element: <div>Child</div>
+        element: <ProjectDetails />
       }
     ]}
   ]

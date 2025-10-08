@@ -34,7 +34,7 @@ const cards: CardData[] = [
 export const ServiceCard = ({ label, img, desc, link, index }: CardData) => {
   return (
     <GlassContainer
-      className="box-border p-2.5 shrink-0 snap-center w-[22rem] border-2 border-opacity h-full"
+      className="relative box-border p-2.5 shrink-0 snap-center w-[22rem] border-2 border-opacity h-full"
       key={index}
     >
       <div className="relative z-20 h-[25rem]">

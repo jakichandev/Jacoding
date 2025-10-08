@@ -81,7 +81,7 @@ export const Form = () => {
   });
 
   return (
-    <GlassContainer className="w-full flex flex-col items-center px-5 pt-14 pb-2 md:py-0">
+    <GlassContainer className="w-full relative flex flex-col items-center px-5 pt-14 pb-2 md:py-0">
       <Heading text="collaboriamo" className="text-4xl z-20 text-white my-3" />
       <form className=" text-white relative z-20 font-p-1 w-full">
         <FormField
