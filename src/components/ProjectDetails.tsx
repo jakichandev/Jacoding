@@ -31,6 +31,7 @@ export const ProjectDetails = () => {
   useEffect(() => {
     setProject(projects.find((proj) => proj.label === label));
   }, [label]);
+
   useEffect(() => {
     setTimeout(() => {
       setAnimation(isOpen ? animations.in : animations.out);
@@ -52,55 +53,77 @@ export const ProjectDetails = () => {
   };
 
   return (
-    <GlassContainer
-      opacity="80"
-      className={`fixed top-20 md:top-[12.5vh] left-1/2 -translate-x-1/2 w-[92vw] h-[60vh] md:w-[75vw] md:h-[75vh] z-50 p-3 transition-all duration-300 ${animation}`}
-    >
-      <div className="banner relative bg-bg-dark-extra">
-        <div className="relative z-200 flex flex-col">
-          <div className="flex flex-row items-center gap-2 w-full">
-            <Heading
-              text={project?.label}
-              className="text-white text-5xl font-bold justify-self-start"
-            />
-            <Button
-              onClick={async () => {
-                await closeModal(-1);
-                setIsOpen(false);
-              }}
-              text="< Back"
-              className="text-lg text-txt cursor-pointer border-2 border-opacity ml-auto"
-            />
-            <Button
-              onClick={async () => {
-                await closeModal("/portfolio");
-                setIsOpen(false);
-              }}
-              text="- Close"
-              className="text-lg text-txt mr-2 cursor-pointer border-2 border-opacity"
-            />
-          </div>
+    <>
+      <div
+        onClick={async () => {
+          await closeModal("/portfolio");
+          setIsOpen(false);
+        }}
+        className="overlay fixed top-0 left-0 z-40 w-full h-full bg-bg-dark-extra opacity-90 overflow-y-hidden cursor-pointer"
+      ></div>
+      <GlassContainer
+        opacity="80"
+        className={`fixed top-30 h-auto left-1/2 -translate-x-1/2 w-[93vw] md:w-[70vw] z-50 p-2 transition-all duration-300 ${animation}`}
+      >
+        <div className="banner relative top-0 left-0 h-full w-full">
+          <div className="relative z-200 flex flex-col justify-between h-full gap-12">
+            <div className="flex flex-row gap-2 w-full">
+              <Heading
+                text={project?.label}
+                className="text-white text-3xl md:text-5xl font-bold justify-self-start"
+              />
+              <Button
+                onClick={async () => {
+                  await closeModal(-1);
+                  setIsOpen(false);
+                }}
+                text="< Back"
+                className="text-lg text-txt cursor-pointer border-2 border-opacity ml-auto"
+              />
+              <Button
+                onClick={async () => {
+                  await closeModal("/portfolio");
+                  setIsOpen(false);
+                }}
+                text="- Close"
+                className="text-lg text-txt mr-2 cursor-pointer border-2 border-opacity"
+              />
+            </div>
 
-          <img
-            className="h-[40vh] w-full object-center object-cover rounded-lg my-4"
-            src={`/${project?.image}`}
-            alt={`${project?.label} Screenshot`}
-          />
-          <p className="text-white font-p-1 text-ellipsis">{project?.body}</p>
-          <div className="flex items-center gap-2">
-            <a className="text-txt underline" href={project?.links?.github}>
-              <span className="font-p-1">
-                <img width={30} src="/github.svg"></img>
-              </span>
-            </a>
-            <a className="text-txt underline" href={project?.links?.online}>
-              <span className="font-p-1 font-bold text-white">
-                {project?.links?.online ? "Live Demo" : ""}
-              </span>
-            </a>
+            <img
+              className="h-[40vh] w-full object-center object-cover rounded-lg"
+              src={`/${project?.image}`}
+              alt={`${project?.label} Screenshot`}
+            />
+            <p className="text-white font-p-1 text-ellipsis text-center">
+              {project?.body}
+            </p>
+            <div className="flex justify-between justify-self-end">
+              <ul className="flex gap-2">
+                {project?.stack?.map((tech) => (
+                  <img
+                    width={30}
+                    src={`/${tech.icon}`}
+                    alt={`${tech.name} icon`}
+                  ></img>
+                ))}
+              </ul>
+              <div className="flex items-center gap-2">
+                <a className="text-txt underline" href={project?.links?.github}>
+                  <span className="font-p-1">
+                    <img width={30} src="/github.svg"></img>
+                  </span>
+                </a>
+                <a className="text-txt underline" href={project?.links?.online}>
+                  <span className="font-p-1 font-bold text-white">
+                    {project?.links?.online ? "Live Demo" : ""}
+                  </span>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </GlassContainer>
+      </GlassContainer>
+    </>
   );
 };
