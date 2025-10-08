@@ -1,4 +1,9 @@
-import { useNavigate, useParams, type NavigateOptions, type To } from "react-router-dom";
+import {
+  useNavigate,
+  useParams,
+  type NavigateOptions,
+  type To,
+} from "react-router-dom";
 import { projects } from "../data/projects";
 import { useEffect, useState } from "react";
 import type { Project } from "../types/Project/Project";
@@ -33,13 +38,17 @@ export const ProjectDetails = () => {
   }, [isOpen]);
 
   const closeModal = (dest: To | number, options?: NavigateOptions) => {
-    return new Promise<number>((resolve) =>
+    function navigateByCondition() {
+      if (typeof dest === "number") navigate(dest);
+      else navigate(dest, options);
+    }
+    return new Promise((resolve) => {
       resolve(
         setTimeout(() => {
-          navigate(dest, options);
+          navigateByCondition();
         }, 500)
-      )
-    );
+      );
+    });
   };
 
   return (
