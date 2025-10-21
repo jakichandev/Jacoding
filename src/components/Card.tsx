@@ -3,6 +3,7 @@ import { Heading } from "./Heading";
 import GlassContainer from "./GlassContainer";
 import type { Project } from "../types/Project/Project";
 
+
 export const Card = ({ children }: React.PropsWithChildren) => {
   return (
     <GlassContainer opacity="80" className="relative text-center p-2">

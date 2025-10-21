@@ -8,7 +8,7 @@ interface LogoProps {
 
 const Logo = ({width, height, navbarState}:LogoProps) => {
     return (
-        <img className={`mx-4 my-3 transition-all duration-500 relative`}  width={width} height={navbarState === "sm" ? height : "auto"} src={logoSVG} alt="Site Logo" />
+        <img className={`transition-all duration-500 relative`}  width={width} height={navbarState === "sm" ? height : "auto"} src={logoSVG} alt="Site Logo" />
     )
 }
 

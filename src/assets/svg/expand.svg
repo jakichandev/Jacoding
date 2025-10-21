@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Livello_2" data-name="Livello 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480.26 799.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #85ece2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 80px;
+      }
+    </style>
+  </defs>
+  <g id="Livello_1-2" data-name="Livello 1">
+    <g id="Free-Icons">
+      <g id="Group">
+        <g id="Shape">
+          <path class="cls-1" d="M440.26,559.97l-200.08,199.92-200.18-199.92M40,239.97L240.18,40l200.08,199.97"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

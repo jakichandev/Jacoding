@@ -29,7 +29,10 @@ export const ServiceCard = ({ label, img, desc, link, index }: Service) => {
         </p>
 
         <Link to={link} className="absolute bottom-0 w-full z-30">
-          <Button text="Maggiori dettagli" className="w-full h-10 text-xl text-white border-2 border-opacity"></Button>
+          <Button
+            text="Maggiori dettagli"
+            className="w-full h-10 text-xl text-white border-2 border-opacity"
+          ></Button>
         </Link>
       </div>
     </GlassContainer>
