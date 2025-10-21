@@ -53,14 +53,14 @@ const Navbar = ({ navState = "sm" }: NavbarProps) => {
       aria-label="Menu di navigazione principale"
       aria-expanded={navActualState === "lg"}
       className={`fixed bg-theme-gray-900/80 z-[100] rounded-lg border-2 border-white/30 px-2 ml-sections-mobile md:ml-sections mt-14 overflow-hidden flex flex-col items-center transition-all duration-500 ease-in-out overflow-y-auto cursor-pointer shadow-xl focus:outline-none focus:ring-2 focus:ring-theme-aqua-500 focus:ring-offset-2 focus:ring-offset-theme-gray-950 ${
-        navActualState === "sm" ? "w-44 h-auto" : "w-64 h-[480px]"}`}
+        navActualState === "sm" ? "w-30 md:w-44 h-auto" : "w-50 md:w-64 h-[480px]"}`}
     >
       <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br from-theme-aqua-800/30 via-theme-gray-800/60 to-theme-gray-900/80 -z-10 blur-xl transition-opacity duration-500 ${
         navActualState === "lg" ? "opacity-70" : "opacity-60"
       }`}></div>
       
-      <div className="flex items-center w-full justify-between py-4" role="banner">
-        <Logo navbarState={navActualState} width={100} />
+      <div className="flex items-center shrink-0 w-full justify-between py-4" role="banner">
+        <Logo navbarState={navActualState} width={71} />
         <div role="button" className="relative">
           {navActualState === "sm" && (
             <span
