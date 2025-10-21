@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import GlassContainer from "./GlassContainer";
 import type { Project } from "../types/Project/Project";
 
 export const Card = ({ children }: React.PropsWithChildren) => {
   return (
-    <GlassContainer opacity="85" className="relative text-center p-2">
+    <GlassContainer opacity="80" className="relative text-center p-2">
       <div className="relative z-20 p-1.5 md:p-2.5">{children}</div>
     </GlassContainer>
   );

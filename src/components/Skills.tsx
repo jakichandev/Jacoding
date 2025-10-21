@@ -1,4 +1,4 @@
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import type { Tech } from "../types/Tech/Tech";
 
 

@@ -1,5 +1,5 @@
 import GlassContainer from "./GlassContainer";
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import Button from "./Button";
 import { Link } from "react-router-dom";
 import type { Service } from "../types/Service/Service";

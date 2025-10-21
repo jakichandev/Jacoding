@@ -7,7 +7,7 @@ import {
 import { projects } from "../data/projects";
 import { useEffect, useState } from "react";
 import type { Project } from "../types/Project/Project";
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import Button from "./Button";
 import GlassContainer from "./GlassContainer";
 

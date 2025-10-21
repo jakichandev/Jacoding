@@ -1,6 +1,6 @@
 import Button from "./Button";
 import GlassContainer from "./GlassContainer";
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import { useState } from "react";
 
 export interface FormValues {

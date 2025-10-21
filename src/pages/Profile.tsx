@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import { profile } from "../data/profile";
 import type { Avatar } from "../types/Profile/Profile";
-import { Heading } from "../components/Hero";
+import { Heading } from "../components/Heading";
 import GlassContainer from "../components/GlassContainer";
 
 const Avatar = ({ label, image }: Avatar) => {

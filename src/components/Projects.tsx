@@ -1,4 +1,4 @@
-import { Heading } from "./Hero";
+import { Heading } from "./Heading";
 import { projects } from "../data/projects";
 import { ProjectCard } from "./Card";
 
