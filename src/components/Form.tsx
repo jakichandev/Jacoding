@@ -2,7 +2,6 @@ import Button from "./Button";
 import GlassContainer from "./GlassContainer";
 import { Heading } from "./Heading";
 import { useState } from "react";
-import Navbar from "./Navbar";
 
 export interface FormValues {
   name: string;
