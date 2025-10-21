@@ -11,62 +11,52 @@ export interface FormValues {
   textBody: string;
 }
 
-export interface FieldProps {
-  name: string;
+interface FieldProps {
+  name: keyof FormValues;
   label: string;
   placeholder: string;
-  twStyle: string;
-  value?: string;
-  id: string;
-  inputType: string;
+  inputType?: "text" | "email" | "tel" | "textarea";
   setFormValues: (newValues: FormValues) => void;
   formValues: FormValues;
 }
 
-export const FormField = ({
+const FormField: React.FC<FieldProps> = ({
   name,
   label,
-  placeholder = "",
-  twStyle,
-  id,
+  placeholder,
   inputType = "text",
   setFormValues,
   formValues,
-}: FieldProps) => {
-  if (inputType === "textarea") {
-    return (
-      <div className={twStyle}>
-        <label className="font-bold">{label}</label>
+}) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormValues({
+      ...formValues,
+      [name]: e.target.value,
+    });
+  };
+
+  const inputClasses = "w-full bg-txt-2 rounded-lg p-2 text-bg-dark font-medium border-2 border-transparent focus:border-theme-aqua-900 focus:outline-none transition-colors";
+
+  return (
+    <div className="flex flex-col gap-1.5">
+      <label className="font-bold text-white">{label}</label>
+      {inputType === "textarea" ? (
         <textarea
           name={name}
-          onChange={(evt) =>
-            setFormValues({
-              ...formValues,
-              [name]: evt.target.value,
-            })
-          }
+          onChange={handleChange}
+          placeholder={placeholder}
           rows={4}
-          className="bg-txt-2 rounded-lg p-2 text-bg-dark"
-        ></textarea>
-      </div>
-    );
-  }
-  return (
-    <div className={twStyle}>
-      <label className="font-bold">{label}</label>
-      <input
-        className="bg-txt-2 py-1.5 px-5 rounded-lg border-2 border-opacity text-bg-dark font-medium"
-        id={id}
-        name={name}
-        type={inputType}
-        placeholder={placeholder}
-        onChange={(evt: React.ChangeEvent<HTMLInputElement>) => {
-          setFormValues({
-            ...formValues,
-            [name]: evt.target.value,
-          });
-        }}
-      />
+          className={inputClasses}
+        />
+      ) : (
+        <input
+          name={name}
+          type={inputType}
+          placeholder={placeholder}
+          onChange={handleChange}
+          className={`${inputClasses} py-1.5 px-5`}
+        />
+      )}
     </div>
   );
 };
@@ -81,60 +71,48 @@ export const Form = () => {
   });
 
   return (
-    <GlassContainer className="w-full relative flex flex-col items-center px-5 pt-14 pb-2 md:py-0">
-      <Heading text="collaboriamo" className="text-4xl z-20 text-white my-3" />
-      <form className=" text-white relative z-20 font-p-1 w-full">
-        <FormField
-          name={"name"}
-          label={"Nome"}
-          placeholder={"inserisci il tuo nome"}
-          id={"name"}
-          inputType={"text"}
-          setFormValues={setFormValues}
-          formValues={formValues}
-          twStyle="flex flex-col gap-1.5"
+    <GlassContainer variant="hero" opacity="70" className="w-full flex flex-col items-center px-5 pt-14 pb-2 md:py-12">
+      <Heading text="collaboriamo" className="text-4xl z-20 text-white mb-6" />
+      <form className="text-white relative z-20 font-p-1 w-full space-y-3">
+        <FormField 
+          name="name" 
+          label="Nome" 
+          placeholder="inserisci il tuo nome" 
+          setFormValues={setFormValues} 
+          formValues={formValues} 
         />
-        <FormField
-          name={"surname"}
-          label={"Cognome"}
-          placeholder={"inserisci il tuo cognome"}
-          id={"surname"}
-          inputType={"text"}
-          setFormValues={setFormValues}
-          formValues={formValues}
-          twStyle="flex flex-col gap-1 my-3"
+        <FormField 
+          name="surname" 
+          label="Cognome" 
+          placeholder="inserisci il tuo cognome" 
+          setFormValues={setFormValues} 
+          formValues={formValues} 
         />
-        <FormField
-          name={"mail"}
-          label={"Email"}
-          placeholder={"inserisci la tua email"}
-          id={"email"}
-          inputType={"mail"}
-          setFormValues={setFormValues}
-          formValues={formValues}
-          twStyle="flex flex-col gap-1 my-3"
+        <FormField 
+          name="mail" 
+          label="Email" 
+          placeholder="inserisci la tua email" 
+          inputType="email"
+          setFormValues={setFormValues} 
+          formValues={formValues} 
         />
-        <FormField
-          name={"telephoneNumber"}
-          label={"Numero di telefono"}
-          placeholder={"inserisci il tuo numero di telefono"}
-          id={"phone"}
-          inputType={"tel"}
-          setFormValues={setFormValues}
-          formValues={formValues}
-          twStyle="flex flex-col gap-1 my-3"
+        <FormField 
+          name="telephoneNumber" 
+          label="Numero di telefono" 
+          placeholder="inserisci il tuo numero di telefono" 
+          inputType="tel"
+          setFormValues={setFormValues} 
+          formValues={formValues} 
         />
-        <FormField
-          name={"textBody"}
-          label={"Parlami della tua idea!"}
-          placeholder={"Minimo 30 caratteri"}
-          id={"phone"}
-          inputType={"textarea"}
-          setFormValues={setFormValues}
-          formValues={formValues}
-          twStyle="flex flex-col gap-1 mt-2"
+        <FormField 
+          name="textBody" 
+          label="Parlami della tua idea!" 
+          placeholder="Minimo 30 caratteri" 
+          inputType="textarea"
+          setFormValues={setFormValues} 
+          formValues={formValues} 
         />
-        <Button text={"Iniziamo!"} className="my-6 w-full text-3xl" />
+        <Button text="Iniziamo!" className="my-6 w-full text-3xl" />
       </form>
     </GlassContainer>
   );

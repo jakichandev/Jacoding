@@ -5,7 +5,6 @@ import contactsIcon from '../assets/svg/contacts.svg';
 import profileIcon from '../assets/svg/profile.svg';
 
 
-
 export interface routeInterface {
     path: string;
     name: string;

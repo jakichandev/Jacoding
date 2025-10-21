@@ -38,9 +38,9 @@ export const ServiceCard = ({ label, img, desc, link, index }: Service) => {
 
 export const Services = () => {
   return (
-    <section className="bg-bg-dark-extra px-sections-mobile md:px-sections py-22 w-full">
+    <section className="bg-theme-gray-950 px-sections-mobile md:px-sections py-22 w-full">
       <Heading
-        text="Ecco cosa faccio"
+        text="Cosa offro"
         className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center m-0"
       ></Heading>
       <p className="text-xl font-p-1 text-txt text-center font-medium italic">

@@ -28,4 +28,17 @@ export const projects: Array<Project> = [
       online: "https://tifodb.netlify.app/",
     },
   },
+  {
+    label: "Vibeshare",
+    image: "vibeshare.png",
+    body: "Chat senza autenticazione per condividere vibrazioni positive con gli altri utenti",
+    stack: [
+      { icon: "react.svg", name: "React" },
+      { icon: "tailwind.svg", name: "Tailwind" },
+      { icon: "typescript.svg", name: "Typescript" },
+    ],
+    links: {
+      github: "https://github.com/jakichandev/vibeshare",
+    },
+  },
 ];

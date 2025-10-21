@@ -10,10 +10,35 @@
 
   /* Colors */
   --color-txt: #85ece2;
+  --color-theme-aqua-50: #e9fcfa;
+  --color-theme-aqua-100: #c1f5f0;
+  --color-theme-aqua-200: #9aefe7;
+  --color-theme-aqua-300: #85ece2;
+  --color-theme-aqua-400: #4ae3d4;
+  --color-theme-aqua-500: #22ddca;
+  --color-theme-aqua-600: #1cb5a6;
+  --color-theme-aqua-700: #168d81;
+  --color-theme-aqua-800: #10655d;
+  --color-theme-aqua-900: #0a3e39;
+  --color-theme-aqua-950: #031614;
+
   --color-bg-dark: #3c3c3b;
   --color-bg-dark-plus: #292927;
   --color-bg-dark-extra: #0b0b0a;
-  --color-bg-dark-opacity: rgba(11, 11, 10, 0.65);
+
+  --color-theme-gray-50: #f0f3f4;
+  --color-theme-gray-100: #d6dde1;
+  --color-theme-gray-200: #bcc7cd;
+  --color-theme-gray-300: #a1b1ba;
+  --color-theme-gray-400: #879ca6;
+  --color-theme-gray-500: #6c8693;
+  --color-theme-gray-600: #596e78;
+  --color-theme-gray-700: #45565e;
+  --color-theme-gray-800: #293338;
+  --color-theme-gray-900: #1e2529;
+  --color-theme-gray-950: #0b0d0f;
+
+  --color-theme-gray-0.65: rgba(11, 11, 10, 0.65);
   --color-important: #fcc0a5;
   --color-opacity: rgba(255, 255, 255, 0.1);
   --color-txt-2: #a8d1cd;
@@ -54,7 +79,7 @@ body {
 }
 
 .icon-btn {
-  @apply absolute w-full h-full top-0 left-0 via-20% bg-gradient-to-b from-txt via-bg-dark-plus to-txt z-10 opacity-50;
+  @apply absolute w-full h-full top-0 left-0 via-20% bg-gradient-to-b from-txt via-theme-gray-800 to-txt z-10 opacity-50;
 }
 
 #overlay-bg {

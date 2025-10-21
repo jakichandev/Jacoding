@@ -63,13 +63,13 @@ export const Skills = () => {
   return (
     <section
       id="skills"
-      className="bg-gradient-to-b bg-bg-dark-extra py-22 px-sections-mobile md:px-sections relative z-10 overflow-hidden"
+      className="bg-theme-gray-950 py-22 px-sections-mobile md:px-sections relative z-10 overflow-hidden"
     >
       <div id="overlay-bg" className="absolute bg-[url('/section_background.jpg')] inset-0 w-full h-full z-0 opacity-100 overflow-hidden bg-cover bg-center rotate-180"></div>
       <div className="relative z-50">
       <Heading
         text="Quali tecnologie utilizzo?"
-        className="text-center text-5xl text-txt"
+        className="text-center text-5xl text-theme-aqua-300 mb-10"
       />
       <div>
         <TechSkill

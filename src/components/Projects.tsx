@@ -4,7 +4,7 @@ import { ProjectCard } from "./Card";
 
 export const Projects = () => {
   return (
-    <section className="px-sections-mobile md:px-sections py-22 bg-bg-dark-extra">
+    <section className="px-sections-mobile md:px-sections py-22 bg-theme-gray-950">
       <Heading
         text="I miei progetti"
         className="text-5xl text-txt text-center"
@@ -17,7 +17,7 @@ export const Projects = () => {
         </span>
         <span>Clicca sull'icona per vedere il mio profilo GitHub</span>
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 my-18 gap-x-4 gap-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-[30rem_30rem_30rem] my-18 gap-x-4 gap-y-2 mx-auto justify-center">
         {projects.map((project) => (
           <ProjectCard
             label={project["label"]}

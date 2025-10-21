@@ -59,11 +59,11 @@ export const ProjectDetails = () => {
           await closeModal("/portfolio");
           setIsOpen(false);
         }}
-        className="overlay fixed top-0 left-0 z-40 w-full h-full bg-bg-dark-extra opacity-90 overflow-y-hidden cursor-pointer"
+        className="overlay fixed top-0 left-0 z-40 w-full h-full bg-theme-gray-950 opacity-90 overflow-y-hidden cursor-pointer"
       ></div>
       <GlassContainer
         opacity="80"
-        className={`fixed top-30 h-auto left-1/2 -translate-x-1/2 w-[93vw] md:w-[70vw] z-50 p-2 transition-all duration-300 ${animation}`}
+        className={`fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[93vw] md:w-[70vw] max-h-[90vh] overflow-y-auto z-50 p-2 transition-all duration-300 ${animation}`}
       >
         <div className="banner relative top-0 left-0 h-full w-full">
           <div className="relative z-200 flex flex-col justify-between h-full gap-12">
@@ -102,16 +102,17 @@ export const ProjectDetails = () => {
               <ul className="flex gap-2">
                 {project?.stack?.map((tech) => (
                   <img
+                    key={tech.name}
                     width={30}
                     src={`/${tech.icon}`}
                     alt={`${tech.name} icon`}
-                  ></img>
+                  />
                 ))}
               </ul>
               <div className="flex items-center gap-2">
                 <a className="text-txt underline" href={project?.links?.github}>
                   <span className="font-p-1">
-                    <img width={30} src="/github.svg"></img>
+                    <img width={30} src="/github.svg" alt="GitHub" />
                   </span>
                 </a>
                 <a className="text-txt underline" href={project?.links?.online}>
