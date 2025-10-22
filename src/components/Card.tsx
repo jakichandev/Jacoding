@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Heading } from "./Heading";
 import GlassContainer from "./GlassContainer";
-import type { Project } from "../types/Project/Project";
+import type { ProjectCardProps } from "../types/Project/Project";
 
 export const Card = ({ children }: React.PropsWithChildren) => {
   return (
@@ -17,12 +17,18 @@ export const ProjectCard = ({
   body,
   stack,
   mode = "expanded",
-}: Project) => {
+}: ProjectCardProps) => {
   if (mode === "compact") {
     return (
       <Card>
-        <Link to={`/portfolio/${label}`} className="flex flex-col items-center gap-2">
-          <Heading text={label} className="text-sm md:text-xl text-white font-bold" />
+        <Link
+          to={`/portfolio/${label}`}
+          className="flex flex-col items-center gap-2"
+        >
+          <Heading
+            text={label}
+            className="text-sm md:text-xl text-white font-bold"
+          />
           <div className="flex justify-center items-center gap-1.5 flex-wrap">
             {stack.map((tech) => (
               <img
@@ -41,7 +47,10 @@ export const ProjectCard = ({
   return (
     <Card>
       <Link to={`/portfolio/${label}`} className="flex flex-col">
-        <Heading text={label} className="text-xl md:text-3xl text-white font-bold mb-4" />
+        <Heading
+          text={label}
+          className="text-xl md:text-3xl text-white font-bold mb-4"
+        />
         <img
           src={`/${image}`}
           alt={`${label} Screenshot`}

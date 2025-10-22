@@ -8,6 +8,9 @@ export interface Project {
   links: {
     github: string;
     online?: string;
-  },
-  mode: "expanded" | "compact";
+  };
 }
+
+export interface ProjectCardProps extends Project {
+  mode: "expanded" | "compact";
+};
