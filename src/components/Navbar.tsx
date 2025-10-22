@@ -53,7 +53,7 @@ const Navbar = ({ navState = "sm" }: NavbarProps) => {
       aria-label="Menu di navigazione principale"
       aria-expanded={navActualState === "lg"}
       className={`fixed top-8 bg-theme-gray-900/80 z-[100] rounded-2xl border-2 border-white/30 px-2 ml-sections-mobile md:ml-sections overflow-hidden flex flex-col items-center transition-all duration-500 ease-in-out overflow-y-auto cursor-pointer shadow-xl focus:outline-none focus:ring-2 focus:ring-theme-aqua-500 focus:ring-offset-2 focus:ring-offset-theme-gray-950 ${
-        navActualState === "sm" ? "w-30 md:w-44 h-auto" : "w-50 md:w-64 h-[480px]"}`}
+        navActualState === "sm" ? "w-30 md:w-40 h-auto" : "w-60 md:w-70 h-[480px]"}`}
     >
       <div className={`absolute top-0 left-0 w-full h-full bg-gradient-to-br from-theme-aqua-800/30 via-theme-gray-800/60 to-theme-gray-900/80 -z-10 blur-xl transition-opacity duration-500 ${
         navActualState === "lg" ? "opacity-70" : "opacity-60"
@@ -95,7 +95,7 @@ const Navbar = ({ navState = "sm" }: NavbarProps) => {
           {routes.map((route, index) => (
             <li 
               key={route.id} 
-              className={`w-full px-4 rounded-lg border-2 border-white/20 hover:border-white/50 focus-within:border-white/50 relative overflow-hidden transition-all duration-300 hover:scale-[1.02] ${
+              className={`w-full px-4 rounded-lg border-2 border-theme-gray-600/20 hover:border-theme-gray-200/50 focus-within:bg-theme-gray-200/50 relative overflow-hidden transition-all duration-300 ${
                 navActualState === "lg" 
                   ? "animate-slide-in opacity-100 translate-x-0" 
                   : "opacity-0 -translate-x-4"
@@ -131,7 +131,7 @@ const Navbar = ({ navState = "sm" }: NavbarProps) => {
             }}
           >
             <Link 
-              className="border-2 border-white/30 hover:border-theme-aqua-900/80 focus:border-theme-aqua-900/80 rounded-xl p-2 relative w-10 h-10 z-0 transition-all duration-300 hover:scale-110 focus:scale-110 hover:shadow-[0_0_15px_rgba(78,205,196,0.5)] focus:shadow-[0_0_15px_rgba(78,205,196,0.5)] bg-theme-gray-800/50 focus:outline-none focus:ring-2 focus:ring-theme-aqua-500" 
+              className="border-2 border-theme-gray-600/30 hover:border-theme-aqua-900/80 focus:border-theme-aqua-900/80 rounded-xl p-2 relative w-10 h-10 z-0 transition-all duration-300 hover:shadow-[0_0_15px_rgba(78,205,196,0.5)] focus:shadow-[0_0_15px_rgba(78,205,196,0.5)] bg-theme-gray-800/50 focus:outline-none focus:ring-2 focus:ring-theme-aqua-500" 
               to={"https://www.instagram.com/jacopogianfaldoni/"} 
               target="_blank"
               rel="noopener noreferrer"
@@ -140,7 +140,7 @@ const Navbar = ({ navState = "sm" }: NavbarProps) => {
               <img src={instagram} alt="" className="icon-btn rounded-lg brightness-110 contrast-125" aria-hidden="true" />
             </Link>
             <Link 
-              className="border-2 border-white/30 hover:border-theme-aqua-900/80 focus:border-theme-aqua-900/80 rounded-xl p-2 relative w-10 h-10 z-0 transition-all duration-300 hover:scale-110 focus:scale-110 hover:shadow-[0_0_15px_rgba(78,205,196,0.5)] focus:shadow-[0_0_15px_rgba(78,205,196,0.5)] bg-theme-gray-800/50 focus:outline-none focus:ring-2 focus:ring-theme-aqua-500" 
+              className="border-2 border-theme-gray-600/30 hover:border-theme-aqua-900/80 focus:border-theme-aqua-900/80 rounded-xl p-2 relative w-10 h-10 z-0 transition-all duration-300 hover:shadow-[0_0_15px_rgba(78,205,196,0.5)] focus:shadow-[0_0_15px_rgba(78,205,196,0.5)] bg-theme-gray-800/50 focus:outline-none focus:ring-2 focus:ring-theme-aqua-500" 
               to={"https://github.com/jakichandev"} 
               target="_blank"
               rel="noopener noreferrer"

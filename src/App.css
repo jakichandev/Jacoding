@@ -78,9 +78,7 @@ body {
   font-family: var(--font-headings-2);
 }
 
-.icon-btn {
-  @apply absolute w-full h-full top-0 left-0 via-20% bg-gradient-to-b from-txt via-theme-gray-800 to-txt z-10 opacity-50;
-}
+
 
 #overlay-bg {
   filter: blur(1.5px);
