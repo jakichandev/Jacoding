@@ -22,6 +22,7 @@ export const Portfolio = () => {
         <main className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-2">
           {projects.map((project) => (
             <ProjectCard
+              mode="expanded"
               label={project["label"]}
               body={project["body"]}
               image={project["image"]}

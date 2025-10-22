@@ -13,7 +13,7 @@ const Hero = () => {
       <GlassContainer
         opacity="60"
         variant="image"
-        className="relative bg-[url('me.png')] bg-cover bg-center md:bg-top flex flex-col items-center justify-end md:min-h-[70vh] min-h-[50vh]"
+        className="relative bg-[url('./me.png')] bg-cover bg-center md:bg-top flex flex-col items-center justify-end min-h-[70vh]"
       >
         <div className="mb-8 text-theme-aqua-400 mx-2.5 text-center flex flex-col items-center justify-end relative z-20">
           <Heading

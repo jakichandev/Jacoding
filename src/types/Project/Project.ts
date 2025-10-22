@@ -8,5 +8,6 @@ export interface Project {
   links: {
     github: string;
     online?: string;
-  } 
+  },
+  mode: "expanded" | "compact";
 }

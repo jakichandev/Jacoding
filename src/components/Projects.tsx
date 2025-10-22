@@ -17,9 +17,10 @@ export const Projects = () => {
         </span>
         <span>Clicca sull'icona per vedere il mio profilo GitHub</span>
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-[30rem_30rem_30rem] my-18 gap-x-4 gap-y-2 mx-auto justify-center">
+      <div className="grid grid-cols-3 my-18 gap-x-4 gap-y-2 mx-auto justify-center">
         {projects.map((project) => (
           <ProjectCard
+            mode="compact"
             label={project["label"]}
             body={project["body"]}
             image={project["image"]}
