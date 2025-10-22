@@ -8,7 +8,7 @@
   --font-code: "SUSE Mono", sans-serif;
   --font-p-1: "Manrope", sans-serif;
 
-  --image-hero: url('./hero_image.jpg');
+  --image-hero: url("./hero_image.jpg");
 
   /* Colors */
   --color-txt: #85ece2;
@@ -72,13 +72,10 @@
 body {
   /* background: linear-gradient(180deg, var(--color-bg-dark-plus) 0%, var(--color-bg-dark-plus) 60%, var(--color-bg-dark-extra) 80%); */
 
-  
   background-color: var(--color-theme-gray-900);
   height: 100vh;
   font-family: var(--font-headings-2);
 }
-
-
 
 #overlay-bg {
   filter: blur(1.5px);
@@ -113,7 +110,8 @@ body {
     transform: scale(1);
   }
   50% {
-    box-shadow: 0 0 12px 4px rgba(78, 205, 196, 0.45), 0 0 24px 12px rgba(78, 205, 196, 0.25);
+    box-shadow: 0 0 12px 4px rgba(78, 205, 196, 0.45),
+      0 0 24px 12px rgba(78, 205, 196, 0.25);
     opacity: 1;
     transform: scale(1.05);
   }

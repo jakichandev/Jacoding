@@ -1,6 +1,5 @@
 import homeIcon from '../assets/svg/home.svg';
 import portfolioIcon from '../assets/svg/portfolio.svg';
-import collaborateIcon from '../assets/svg/collaborate.svg';
 import contactsIcon from '../assets/svg/contacts.svg';
 import profileIcon from '../assets/svg/profile.svg';
 
@@ -32,12 +31,6 @@ export const routes : routeInterface[] = [
         name: "Portfolio",
         id: 2,
         icon: portfolioIcon
-    },
-    {
-        path: "/collaborate",
-        name: "Collaborate",
-        id: 3,
-        icon: collaborateIcon
     },
     {
         path: "/contacts",
