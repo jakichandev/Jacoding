@@ -15,7 +15,7 @@ const GlassContainer: React.FC<GlassContainerProps> = ({
   variant = "default",
   hover = false
 }) => {
-  const baseStyles = "overflow-hidden rounded-lg border-2 border-white/20 backdrop-blur-sm";
+  const baseStyles = "overflow-hidden rounded-2xl border-2 border-white/20 backdrop-blur-md";
   
   const variants = {
     default: "p-6",
@@ -40,7 +40,7 @@ const GlassContainer: React.FC<GlassContainerProps> = ({
   return (
     <div className={`${baseStyles} ${variants[variant]} ${hoverStyles} ${className}`}>
       <div
-        className={`absolute inset-0 bg-gradient-to-br from-theme-gray-800 via-theme-aqua-900 to-theme-gray-950 blur-3xl ${backgroundOpacity[opacity]} -z-10 transition-all duration-500`}
+        className={`absolute inset-0 bg-gradient-to-br from-theme-gray-800 via-theme-aqua-600 to-theme-gray-950 blur-3xl ${backgroundOpacity[opacity]} -z-10 transition-all duration-500`}
       />
       {children}
     </div>

@@ -1,28 +1,40 @@
 import GlassContainer from "./GlassContainer";
 import { Heading } from "./Heading";
+import Button from "./Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
     <section
-      className="px-sections-mobile md:px-sections flex flex-col w-full max-h-[80vh] box-border py-12 bg-[url('hero_image_3.jpg')] bg-cover bg-center"
+      className="px-sections-mobile md:px-sections py-8 flex flex-col w-full box-border bg-gradient-to-br from-theme-aqua-900 via-theme-gray-900 to-theme-aqua-900"
       id="hero-section"
     >
-      <GlassContainer opacity="40" variant="image" className="relative my-2">
-        <img className="w-full relative -z-30 opacity-50" src="me.JPG" alt="Jacopo" />
-
-        <div className="scale-150 md:scale-100 pb-22 text-theme-aqua-400 mx-2.5 text-center flex flex-col items-center justify-end absolute z-20 w-full h-full top-0 left-0 md:pb-12">
+      <GlassContainer
+        opacity="60"
+        variant="image"
+        className="relative bg-[url('me.png')] bg-cover bg-center md:bg-top flex flex-col items-center justify-end md:min-h-[70vh] min-h-[50vh]"
+      >
+        <div className="mb-8 text-theme-aqua-400 mx-2.5 text-center flex flex-col items-center justify-end relative z-20">
           <Heading
             text="I'm Jacopo"
-            className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-thin"
+            className="text-5xl md:text-6xl lg:text-7xl font-thin"
           />
           <Heading
             text="frontend"
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium"
+            className="text-6xl md:text-7xl lg:text-8xl font-medium"
           />
           <Heading
             text="developer"
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-medium"
+            className="text-6xl md:text-7xl lg:text-8xl font-medium"
           />
+          <div className="mt-8">
+            <Button
+              onClick={() => navigate("/portfolio")}
+              className="text-3xl cursor-pointer"
+              text="Guarda i miei progetti"
+            />
+          </div>
         </div>
       </GlassContainer>
     </section>

@@ -12,7 +12,7 @@ export interface FormValues {
 }
 
 interface FieldProps {
-  name: keyof FormValues;
+  name: string;
   label: string;
   placeholder: string;
   inputType?: "text" | "email" | "tel" | "textarea";
@@ -81,7 +81,7 @@ export const Form = () => {
 
   return (
     <>
-      <section className="min-h-screen py-24 px-sections-mobile md:px-sections flex items-center justify-center">
+      <section className="min-h-screen py-24 md:px-sections flex items-center justify-center">
         <GlassContainer variant="hero" opacity="70" className="w-full max-w-3xl flex flex-col items-center px-5 pt-14 pb-2 md:py-12">
           <Heading text="collaboriamo" className="text-4xl z-20 text-white mb-6" />
           <form className="text-white relative z-20 font-p-1 w-full space-y-3">
