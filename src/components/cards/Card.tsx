@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { Heading } from "./Heading";
-import GlassContainer from "./GlassContainer";
-import type { ProjectCardProps } from "../types/Project/Project";
+import { Heading } from "../ui/Heading";
+import GlassContainer from "../ui/GlassContainer";
+import type { ProjectCardProps } from "../../types/Project/Project";
 
 export const Card = ({ children }: React.PropsWithChildren) => {
   return (

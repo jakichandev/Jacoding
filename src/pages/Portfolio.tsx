@@ -1,9 +1,9 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import { Heading } from "../components/Heading";
-import Button from "../components/Button";
+import Navbar from "../components/layout/Navbar";
+import { Heading } from "../components/ui/Heading";
+import Button from "../components/ui/Button";
 import { projects } from "../data/projects";
-import { ProjectCard } from "../components/Card";
+import { ProjectCard } from "../components/cards/Card";
 
 export const Portfolio = () => {
   return (

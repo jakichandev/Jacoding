@@ -13,4 +13,4 @@ export interface Project {
 
 export interface ProjectCardProps extends Project {
   mode: "expanded" | "compact";
-};
+}

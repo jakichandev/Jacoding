@@ -2,7 +2,7 @@ import { useRoutes } from "react-router";
 import App from "../App";
 import Collaborate from "../pages/Collaborate";
 import { Portfolio } from "../pages/Portfolio";
-import { ProjectDetails } from "../components/ProjectDetails";
+import { ProjectDetails } from "../components/sections/ProjectDetails";
 import { Profile } from "../pages/Profile";
 
 const routings = [

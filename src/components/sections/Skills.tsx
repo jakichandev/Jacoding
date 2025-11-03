@@ -1,6 +1,5 @@
-import { Heading } from "./Heading";
-import type { Tech } from "../types/Tech/Tech";
-
+import { Heading } from "../ui/Heading";
+import type { Tech } from "../../types/Tech/Tech";
 
 interface TechStack {
   programmingLangs: Tech[];
@@ -65,20 +64,23 @@ export const Skills = () => {
       id="skills"
       className="bg-theme-gray-950 py-22 px-sections-mobile md:px-sections relative z-10 overflow-hidden"
     >
-      <div id="overlay-bg" className="absolute bg-[url('/section_background.jpg')] inset-0 w-full h-full z-0 opacity-100 overflow-hidden bg-cover bg-center rotate-180"></div>
+      <div
+        id="overlay-bg"
+        className="absolute bg-[url('/section_background.jpg')] inset-0 w-full h-full z-0 opacity-100 overflow-hidden bg-cover bg-center rotate-180"
+      ></div>
       <div className="relative z-50">
-      <Heading
-        text="Quali tecnologie utilizzo?"
-        className="text-center text-5xl text-theme-aqua-300 mb-10"
-      />
-      <div>
-        <TechSkill
-          label="Linguaggi di programmazione"
-          techs={techStack.programmingLangs}
+        <Heading
+          text="Quali tecnologie utilizzo?"
+          className="text-center text-5xl text-theme-aqua-300 mb-10"
         />
-        <TechSkill label="Frameworks" techs={techStack.frameworks} />
-        <TechSkill label="Tools" techs={techStack.tools} />
-      </div>
+        <div>
+          <TechSkill
+            label="Linguaggi di programmazione"
+            techs={techStack.programmingLangs}
+          />
+          <TechSkill label="Frameworks" techs={techStack.frameworks} />
+          <TechSkill label="Tools" techs={techStack.tools} />
+        </div>
       </div>
     </section>
   );

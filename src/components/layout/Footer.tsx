@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { routes } from "../routes/routes";
-import instagram from "../assets/svg/instagram.svg";
-import github from "../assets/svg/github.svg";
-import { Heading } from "./Heading";
+import { routes } from "../../routes/routes";
+import instagram from "../../assets/svg/instagram.svg";
+import github from "../../assets/svg/github.svg";
+import { Heading } from "../ui/Heading";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -47,7 +47,10 @@ const Footer = () => {
 
           {/* Colonna 2: Navigazione */}
           <div className="flex flex-col gap-4">
-            <Heading text="Navigazione" className="text-xl font-bold text-white mb-2" />
+            <Heading
+              text="Navigazione"
+              className="text-xl font-bold text-white mb-2"
+            />
             <ul className="flex flex-col gap-3">
               {routes.map((route) => (
                 <li key={route.id}>
@@ -65,7 +68,10 @@ const Footer = () => {
 
           {/* Colonna 3: Contatti */}
           <div className="flex flex-col gap-4">
-            <Heading text="Contatti" className="text-xl font-bold text-white mb-2" />
+            <Heading
+              text="Contatti"
+              className="text-xl font-bold text-white mb-2"
+            />
             <div className="flex flex-col gap-3 text-white/70 font-p-1">
               <a
                 href="mailto:jacopogianfaldoni@outlook.it"

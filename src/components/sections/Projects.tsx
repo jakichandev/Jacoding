@@ -1,6 +1,6 @@
-import { Heading } from "./Heading";
-import { projects } from "../data/projects";
-import { ProjectCard } from "./Card";
+import { Heading } from "../ui/Heading";
+import { projects } from "../../data/projects";
+import { ProjectCard } from "../cards/Card";
 
 export const Projects = () => {
   return (
@@ -20,6 +20,7 @@ export const Projects = () => {
       <div className="grid grid-cols-3 md:grid-cols-5 my-18 gap-x-4 gap-y-2 mx-auto justify-center">
         {projects.map((project) => (
           <ProjectCard
+            key={project["label"]}
             mode="compact"
             label={project["label"]}
             body={project["body"]}

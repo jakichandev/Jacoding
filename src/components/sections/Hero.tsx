@@ -1,6 +1,6 @@
-import GlassContainer from "./GlassContainer";
-import { Heading } from "./Heading";
-import Button from "./Button";
+import GlassContainer from "../ui/GlassContainer";
+import { Heading } from "../ui/Heading";
+import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
 
 const Hero = () => {

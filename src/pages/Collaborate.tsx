@@ -1,5 +1,5 @@
-import Navbar from "../components/Navbar";
-import { Form } from "../components/Form";
+import Navbar from "../components/layout/Navbar";
+import { Form } from "../components/form/Form";
 
 const Collaborate = () => {
   return (
