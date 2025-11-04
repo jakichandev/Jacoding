@@ -23,6 +23,10 @@ const routings = [
     path: "profile",
     element: <Profile />,
   },
+  {
+    path: "contact",
+    element: <Collaborate />,
+  },
 ];
 
 const RoutingSystem = () => {
