@@ -38,29 +38,25 @@ const techStack: TechStack = {
 
 const TechSkill = ({ techs, label }: Techs) => {
   return (
-    <article className="my-16">
-      <div>
-        <Heading
-          fontFamily="fontP"
-          level="custom"
-          className="text-lg md:text-2xl grid-cols-1"
-        >
-          {label}
-        </Heading>
-        <ul>
-          {techs.map((tech, index) => (
-            <li
-              key={index}
-              className="flex items-center my-1.5 gap-1.5 justify-center"
-            >
-              <img src={tech.icon} alt={tech.name} className="w-10 h-10 mr-2" />
-              <span className="text-white text-lg font-p-1 font-bold">
-                {tech.name}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <article className="my-12 flex flex-col md:grid grid-cols-2 justify-around items-center">
+      <Heading
+        fontFamily="fontP"
+        level="custom"
+        color="sunsetEnd"
+        className="text-lg md:text-2xl grid-cols-1"
+      >
+        {`#${label}`}
+      </Heading>
+      <ul className="grid grid-cols-3 grid-rows-2 gap-2 mt-5">
+        {techs.map((tech, index) => (
+          <li key={index} className="flex my-2 md:my-0 items-center gap-1.5">
+            <img src={tech.icon} alt={tech.name} className="w-4 h-4" />
+            <span className="text-white text-sm font-p-1 font-bold">
+              {tech.name}
+            </span>
+          </li>
+        ))}
+      </ul>
     </article>
   );
 };
@@ -68,17 +64,14 @@ const TechSkill = ({ techs, label }: Techs) => {
 export const Skills = () => {
   return (
     <Section extraClasses="relative">
-      <div className="relative z-50">
-        <Heading>Competenze Tecniche</Heading>
-        <div>
-          <TechSkill
-            label="Linguaggi di programmazione"
-            techs={techStack.programmingLangs}
-          />
-          <TechSkill label="Frameworks" techs={techStack.frameworks} />
-          <TechSkill label="Tools" techs={techStack.tools} />
-        </div>
-      </div>
+      <Heading>Competenze Tecniche</Heading>
+
+      <TechSkill
+        label="Linguaggi di programmazione"
+        techs={techStack.programmingLangs}
+      />
+      <TechSkill label="Frameworks" techs={techStack.frameworks} />
+      <TechSkill label="Tools" techs={techStack.tools} />
     </Section>
   );
 };
