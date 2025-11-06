@@ -145,7 +145,7 @@ export const Form = () => {
             <Button
               type="submit"
               text="Iniziamo!"
-              className="my-6 w-full text-3xl"
+              className="my-6 w-full text-3xl cursor-pointer"
             />
           </form>
           {errors && (

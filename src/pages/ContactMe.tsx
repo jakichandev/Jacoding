@@ -1,7 +1,7 @@
 import Navbar from "../components/layout/Navbar";
 import { Form } from "../components/form/Form";
 
-const Collaborate = () => {
+const ContactMePage = () => {
   return (
     <>
       <Navbar navState="sm" />
@@ -12,4 +12,4 @@ const Collaborate = () => {
   );
 };
 
-export default Collaborate;
+export default ContactMePage;

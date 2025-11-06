@@ -22,7 +22,11 @@ export const Profile = () => {
     <>
       <Navbar navState="sm" />
       <section className="py-30 px-sections-mobile md:px-sections grid grid-cols-1 lg:grid-cols-[1fr_4fr] text-txt font-p-1 min-h-[90vh] gap-x-8 gap-y-3">
-        <GlassContainer opacity="70" variant="default" className="h-fit">
+        <GlassContainer
+          opacity="70"
+          variant="default"
+          className="h-fit overflow-x-auto"
+        >
           <Avatar label={profile.name} image={profile.avatar.image} />
 
           <ul className="flex flex-col text-lg text-white list-none font-p-1 font-bold gap-2 mt-4">

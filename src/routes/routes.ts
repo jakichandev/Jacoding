@@ -30,8 +30,8 @@ export const routes: routeInterface[] = [
     icon: portfolioIcon,
   },
   {
-    path: "/collaborate",
-    name: "Collaborate",
+    path: "/contact",
+    name: "Contact Me",
     id: 4,
     icon: contactsIcon,
   },
