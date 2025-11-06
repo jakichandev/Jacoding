@@ -8,6 +8,7 @@ import type { FormValues, MailErrors } from "../../types/Form/Form";
 import { initialValues } from "../../data/formValues";
 import { sendMail } from "../../services/emailHandler";
 import { FormLoader } from "../ui/Loaders";
+import { SendOutlined } from "@ant-design/icons";
 
 export const Form = () => {
   const [formValues, setFormValues] = useState<FormValues>(initialValues);
@@ -66,21 +67,16 @@ export const Form = () => {
 
             {/* Testo di successo */}
             <div className="flex flex-col items-center gap-2">
-              <Heading
-                text="Messaggio inviato!"
-                className="text-3xl md:text-4xl text-theme-aqua-400"
-              />
+              <Heading level="primary" color="sunsetEnd"></Heading>
               <p className="text-white/70 font-p-1 text-lg text-center max-w-md">
                 Grazie per avermi contattato! Ti risponderò il prima possibile.
               </p>
             </div>
 
             {/* Bottone per inviare un altro messaggio */}
-            <Button
-              onClick={() => setSuccess(false)}
-              text="Invia un altro messaggio"
-              className="mt-4 text-xl"
-            />
+            <Button onClick={() => setSuccess(false)} className="mt-4 text-xl">
+              Invia un altro messaggio
+            </Button>
           </div>
         </GlassContainer>
       </section>
@@ -89,75 +85,72 @@ export const Form = () => {
 
   return (
     <>
-      <section className="min-h-screen py-24 md:px-sections flex items-center justify-center">
-        <GlassContainer
-          variant="hero"
-          opacity="70"
-          className="w-full max-w-3xl flex flex-col items-center px-5 pt-14 pb-2 md:py-12"
+      <GlassContainer
+        variant="hero"
+        opacity="70"
+        className="w-full max-w-3xl flex flex-col items-center px-5 pt-14 pb-2 md:py-12"
+      >
+        <Heading text="Contattami" className="text-4xl z-20 text-white mb-6" />
+        <form
+          onSubmit={(e) =>
+            sendMail(
+              e,
+              setErrors,
+              setLoading,
+              formValues,
+              setFormValues,
+              setSuccess
+            )
+          }
+          className="text-white relative z-20 font-p-1 w-full space-y-3"
         >
-          <Heading
-            text="collaboriamo"
-            className="text-4xl z-20 text-white mb-6"
+          <FormField
+            name="name"
+            label="Nome"
+            placeholder="inserisci il tuo nome"
+            setFormValues={setFormValues}
+            formValues={formValues}
           />
-          <form
-            onSubmit={(e) =>
-              sendMail(
-                e,
-                setErrors,
-                setLoading,
-                formValues,
-                setFormValues,
-                setSuccess
-              )
-            }
-            className="text-white relative z-20 font-p-1 w-full space-y-3"
+          <FormField
+            name="surname"
+            label="Cognome"
+            placeholder="inserisci il tuo cognome"
+            setFormValues={setFormValues}
+            formValues={formValues}
+          />
+          <FormField
+            name="email"
+            label="Email"
+            placeholder="inserisci la tua email"
+            inputType="email"
+            setFormValues={setFormValues}
+            formValues={formValues}
+          />
+          <FormField
+            name="message"
+            label="Parlami della tua idea!"
+            placeholder="Minimo 30 caratteri"
+            inputType="textarea"
+            setFormValues={setFormValues}
+            formValues={formValues}
+          />
+          <Button
+            type="submit"
+            className="mt-2 w-full md:w-96 mx-auto ring-2 ring-theme-sunset-end-400 text-theme-sunset-end-200"
           >
-            <FormField
-              name="name"
-              label="Nome"
-              placeholder="inserisci il tuo nome"
-              setFormValues={setFormValues}
-              formValues={formValues}
-            />
-            <FormField
-              name="surname"
-              label="Cognome"
-              placeholder="inserisci il tuo cognome"
-              setFormValues={setFormValues}
-              formValues={formValues}
-            />
-            <FormField
-              name="email"
-              label="Email"
-              placeholder="inserisci la tua email"
-              inputType="email"
-              setFormValues={setFormValues}
-              formValues={formValues}
-            />
-            <FormField
-              name="message"
-              label="Parlami della tua idea!"
-              placeholder="Minimo 30 caratteri"
-              inputType="textarea"
-              setFormValues={setFormValues}
-              formValues={formValues}
-            />
-            <Button
-              type="submit"
-              text="Iniziamo!"
-              className="my-6 w-full text-3xl cursor-pointer"
-            />
-          </form>
-          {errors && (
-            <div className="font-p-1 text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg p-4 space-y-1 mt-4 w-full">
-              {errors?.name && <p>• {errors.name[0]}</p>}
-              {errors?.surname && <p>• {errors.surname[0]}</p>}
-              {errors?.email && <p>• {errors.email[0]}</p>}
-              {errors?.message && <p>• {errors.message[0]}</p>}
-            </div>
-          )}
-        </GlassContainer>
-      </section>
+            Invia il messaggio
+            <SendOutlined className="ml-2" />
+          </Button>
+        </form>
+        {errors && (
+          <div className="font-p-1 text-red-400 bg-red-500/10 border border-red-500/30 rounded-lg p-4 space-y-1 mt-4 w-full">
+            {errors?.name && <p>• {errors.name[0]}</p>}
+            {errors?.surname && <p>• {errors.surname[0]}</p>}
+            {errors?.email && <p>• {errors.email[0]}</p>}
+            {errors?.message && <p>• {errors.message[0]}</p>}
+          </div>
+        )}
+      </GlassContainer>
     </>
   );
 };

@@ -40,6 +40,18 @@
   --color-theme-gray-900: #1e2529;
   --color-theme-gray-950: #0b0d0f;
 
+  --color-theme-sunset-end-50: #fdece8;
+  --color-theme-sunset-end-100: #f9cabe;
+  --color-theme-sunset-end-200: #f5a794;
+  --color-theme-sunset-end-300: #f1856a;
+  --color-theme-sunset-end-400: #ee6c4d;
+  --color-theme-sunset-end-500: #e94016;
+  --color-theme-sunset-end-600: #bf3412;
+  --color-theme-sunset-end-700: #95290e;
+  --color-theme-sunset-end-800: #6b1d0a;
+  --color-theme-sunset-end-900: #411206;
+  --color-theme-sunset-end-950: #170602;
+
   --color-theme-gray-0.65: rgba(11, 11, 10, 0.65);
   --color-important: #fcc0a5;
   --color-opacity: rgba(255, 255, 255, 0.1);

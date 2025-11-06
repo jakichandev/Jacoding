@@ -6,10 +6,7 @@ import { Section } from "../ui/Section";
 export const Projects = () => {
   return (
     <Section>
-      <Heading
-        text="I miei progetti"
-        className="text-5xl text-txt text-center"
-      />
+      <Heading level="primary">I miei progetti</Heading>
       <p className="text-txt font-p-1 gap-2 mt-4 font-medium flex items-center justify-center text-sm md:text-normal">
         <span>
           <a href="/">

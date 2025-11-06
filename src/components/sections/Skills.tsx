@@ -1,5 +1,6 @@
 import { Heading } from "../ui/Heading";
 import type { Tech } from "../../types/Tech/Tech";
+import { Section } from "../ui/Section";
 
 interface TechStack {
   programmingLangs: Tech[];
@@ -38,14 +39,20 @@ const techStack: TechStack = {
 const TechSkill = ({ techs, label }: Techs) => {
   return (
     <article className="my-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center justify-center place-content-center text-center">
+      <div>
         <Heading
-          text={label}
-          className="font-p-1 text-3xl font-extrabold text-white my-6 md:my-auto md:mr-10"
-        />
-        <ul className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-4">
+          fontFamily="fontP"
+          level="custom"
+          className="text-lg md:text-2xl grid-cols-1"
+        >
+          {label}
+        </Heading>
+        <ul>
           {techs.map((tech, index) => (
-            <li key={index} className="flex items-center my-1.5">
+            <li
+              key={index}
+              className="flex items-center my-1.5 gap-1.5 justify-center"
+            >
               <img src={tech.icon} alt={tech.name} className="w-10 h-10 mr-2" />
               <span className="text-white text-lg font-p-1 font-bold">
                 {tech.name}
@@ -60,19 +67,9 @@ const TechSkill = ({ techs, label }: Techs) => {
 
 export const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="bg-theme-gray-950 py-22 px-sections-mobile md:px-sections relative z-10 overflow-hidden"
-    >
-      <div
-        id="overlay-bg"
-        className="absolute bg-[url('/section_background.jpg')] inset-0 w-full h-full z-0 opacity-100 overflow-hidden bg-cover bg-center rotate-180"
-      ></div>
+    <Section extraClasses="relative">
       <div className="relative z-50">
-        <Heading
-          text="Quali tecnologie utilizzo?"
-          className="text-center text-5xl text-theme-aqua-300 mb-10"
-        />
+        <Heading>Competenze Tecniche</Heading>
         <div>
           <TechSkill
             label="Linguaggi di programmazione"
@@ -82,6 +79,6 @@ export const Skills = () => {
           <TechSkill label="Tools" techs={techStack.tools} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

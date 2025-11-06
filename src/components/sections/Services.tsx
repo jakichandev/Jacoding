@@ -3,18 +3,25 @@ import { Heading } from "../ui/Heading";
 import type { Service } from "../../types/Service/Service";
 import { services } from "../../data/services";
 import { useRef, useState, useEffect } from "react";
+import { Section } from "../ui/Section";
 
-export const ServiceCard = ({ label, img, desc, link, index }: Service) => {
+export const ServiceCard = ({ label, img, desc, index }: Service) => {
   return (
     <GlassContainer
+      opacity={"30"}
       className="relative box-border p-2.5 shrink-0 snap-center w-[22rem] border-2 border-opacity h-full"
       key={index}
     >
       <div className="relative z-20 h-[25rem]">
         <Heading
-          className="text-4xl text-white bg-cover"
-          text={label}
-        ></Heading>
+          fontFamily="fontH"
+          color="sunsetEnd"
+          level="custom"
+          weight="normal"
+          className="text-2xl md:text-3xl text-center mt-4 mb-2"
+        >
+          {label}
+        </Heading>
         <div
           style={{
             background: `url("${img}")`,
@@ -61,11 +68,8 @@ export const Services = () => {
   };
 
   return (
-    <section className="bg-theme-gray-950 px-sections-mobile md:px-sections py-22 w-full">
-      <Heading
-        text="Cosa offro"
-        className="text-[2.6rem] sm:text-6xl  text-txt my-3 text-center m-0"
-      ></Heading>
+    <Section>
+      <Heading>I miei servizi</Heading>
       <p className="text-xl font-p-1 text-txt text-center font-medium italic">
         con le migliori tecnologie sul mercato
       </p>
@@ -105,6 +109,6 @@ export const Services = () => {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };

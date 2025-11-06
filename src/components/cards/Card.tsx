@@ -26,9 +26,13 @@ export const ProjectCard = ({
           className="flex flex-col items-center gap-2"
         >
           <Heading
-            text={label}
-            className="text-sm md:text-xl text-white font-bold"
-          />
+            level="tertiary"
+            color="sunsetEnd"
+            weight="normal"
+            className="text-center"
+          >
+            {label}
+          </Heading>
           <div className="flex justify-center items-center gap-1.5 flex-wrap">
             {stack.map((tech) => (
               <img

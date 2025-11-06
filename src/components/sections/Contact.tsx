@@ -1,10 +1,10 @@
 import { Section } from "../ui/Section";
-import { Form } from "../form/Form";
+import { Heading } from "../ui/Heading";
 
 export const Contact = () => {
   return (
     <Section>
-      <Form />
+      <Heading level="primary">Contattami</Heading>
     </Section>
   );
 };
