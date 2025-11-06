@@ -1,7 +1,5 @@
 import GlassContainer from "../ui/GlassContainer";
 import { Heading } from "../ui/Heading";
-import Button from "../ui/Button";
-import { Link } from "react-router-dom";
 import type { Service } from "../../types/Service/Service";
 import { services } from "../../data/services";
 import { useRef, useState, useEffect } from "react";
@@ -28,13 +26,6 @@ export const ServiceCard = ({ label, img, desc, link, index }: Service) => {
         <p className="mx-auto font-p-1 text-white text-center my-7 whitespace-break-spaces text-sm font-bold">
           {desc}
         </p>
-
-        <Link to={link} className="absolute bottom-0 w-full z-30">
-          <Button
-            text="Maggiori dettagli"
-            className="w-full h-10 text-xl text-white border-2 border-opacity"
-          ></Button>
-        </Link>
       </div>
     </GlassContainer>
   );

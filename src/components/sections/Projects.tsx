@@ -1,10 +1,11 @@
 import { Heading } from "../ui/Heading";
 import { projects } from "../../data/projects";
 import { ProjectCard } from "../cards/Card";
+import { Section } from "../ui/Section";
 
 export const Projects = () => {
   return (
-    <section className="px-sections-mobile md:px-sections py-22 bg-theme-gray-950">
+    <Section>
       <Heading
         text="I miei progetti"
         className="text-5xl text-txt text-center"
@@ -30,6 +31,6 @@ export const Projects = () => {
           />
         ))}
       </div>
-    </section>
+    </Section>
   );
 };

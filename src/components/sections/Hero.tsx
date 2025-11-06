@@ -2,14 +2,12 @@ import GlassContainer from "../ui/GlassContainer";
 import { Heading } from "../ui/Heading";
 import Button from "../ui/Button";
 import { useNavigate } from "react-router-dom";
+import { Section } from "../ui/Section";
 
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <section
-      className="px-sections-mobile md:px-sections py-8 flex flex-col w-full box-border bg-gradient-to-br from-theme-aqua-900 via-theme-gray-900 to-theme-aqua-900"
-      id="hero-section"
-    >
+    <Section paddingY="small">
       <GlassContainer
         opacity="60"
         variant="image"
@@ -37,7 +35,7 @@ const Hero = () => {
           </div>
         </div>
       </GlassContainer>
-    </section>
+    </Section>
   );
 };
 
