@@ -1,16 +1,18 @@
 import type { Profile } from "../types/Profile/Profile";
+import { PhoneOutlined, MailOutlined } from "@ant-design/icons";
 
 export const profile: Profile = {
   name: "Jacopo",
   surname: "Gianfaldoni",
   age: 23,
+  nationality: "Italian",
   contacts: [
     {
       label: "email",
       content: "gianfaldoni.jaco@gmail.com",
-      icon: "/mail.svg",
+      icon: <MailOutlined />,
     },
-    { label: "phone", content: 3291299673, icon: "/phone.svg" },
+    { label: "phone", content: 3291299673, icon: <PhoneOutlined /> },
   ],
   avatar: {
     image: "/me.JPG",

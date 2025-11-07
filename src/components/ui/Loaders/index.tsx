@@ -13,10 +13,9 @@ export const FormLoader = () => {
 
       {/* Testo animato */}
       <div className="flex flex-col items-center gap-2">
-        <Heading
-          text="Invio in corso"
-          className="text-3xl text-white animate-pulse"
-        />
+        <Heading level="secondary" color="sunsetEnd">
+          Invio in corso...
+        </Heading>
         <p className="text-white/70 font-p-1 text-lg">
           Attendi qualche istante...
         </p>

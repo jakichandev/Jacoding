@@ -10,7 +10,7 @@ interface HeadingType {
 const HEADING_STYLES = {
   primary: "text-4xl md:text-5xl text-center",
   secondary: "text-3xl md:text-4xl text-left",
-  tertiary: "text-lg md:text-xl text-left",
+  tertiary: "text-2xl md:text-3xl text-left",
   custom: "",
   aqua: "text-theme-aqua-400",
   sunsetEnd: "text-theme-sunset-end-400",

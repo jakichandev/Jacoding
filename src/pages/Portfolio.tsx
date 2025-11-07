@@ -1,25 +1,24 @@
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import { Heading } from "../components/ui/Heading";
-import Button from "../components/ui/Button";
 import { projects } from "../data/projects";
 import { ProjectCard } from "../components/cards/Card";
+import { Section } from "../components/ui/Section";
+import Footer from "../components/layout/Footer";
 
 export const Portfolio = () => {
   return (
     <>
       <Navbar navState="sm" />
-      <section className="px-sections-mobile md:px-sections pt-25 box-border h-screen">
-        <Heading text="Portfolio" className="text-txt text-6xl" />
-        <div className="flex gap-4 my-4">
+      <Section paddingY="large">
+        <Heading>portfolio</Heading>
+        {/* <div className="flex gap-4 my-4">
           <h3 className="text-txt text-2xl font-p-1">Filtri</h3>
           <div className="flex gap-x-1.5">
-            <Button text="JAVASCRIPT" className="text-txt border-opacity" />
-            <Button text="TAILWIND" className="text-txt border-opacity" />
-            <Button text="BACKEND" className="text-txt border-opacity" />
+            
           </div>
-        </div>
-        <main className="grid grid-cols-1 md:grid-cols-4 gap-x-4 gap-y-2">
+        </div> */}
+        <main className="grid grid-cols-1 md:grid-cols-4 grid-rows-[repeat(minmax(100px, 1fr), auto)] gap-x-4 gap-y-2 my-6">
           {projects.map((project) => (
             <ProjectCard
               mode="expanded"
@@ -31,7 +30,8 @@ export const Portfolio = () => {
             />
           ))}
         </main>
-      </section>
+      </Section>
+      <Footer />
       <div>
         <Outlet />
       </div>

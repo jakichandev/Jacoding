@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-theme-gray-950 via-theme-gray-900 to-theme-gray-950 border-t-2 border-theme-aqua-500/30">
+    <footer className="bg-gradient-to-br from-theme-gray-800 via-theme-aqua-950 to-theme-gray-800">
       <div className="px-sections-mobile md:px-sections py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Colonna 1: Brand */}
@@ -47,10 +47,9 @@ const Footer = () => {
 
           {/* Colonna 2: Navigazione */}
           <div className="flex flex-col gap-4">
-            <Heading
-              text="Navigazione"
-              className="text-xl font-bold text-white mb-2"
-            />
+            <Heading color="sunsetEnd" level="tertiary">
+              Navigazione
+            </Heading>
             <ul className="flex flex-col gap-3">
               {routes.map((route) => (
                 <li key={route.id}>
@@ -68,10 +67,9 @@ const Footer = () => {
 
           {/* Colonna 3: Contatti */}
           <div className="flex flex-col gap-4">
-            <Heading
-              text="Contatti"
-              className="text-xl font-bold text-white mb-2"
-            />
+            <Heading color="sunsetEnd" level="tertiary">
+              Contatti
+            </Heading>
             <div className="flex flex-col gap-3 text-white/70 font-p-1">
               <a
                 href="mailto:jacopogianfaldoni@outlook.it"

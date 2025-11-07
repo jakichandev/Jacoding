@@ -10,7 +10,7 @@ const SECTION_STYLES = {
   PY: {
     default: "py-12 md:py-22" as const,
     small: "py-8" as const,
-    large: "py-22 md:py-30" as const,
+    large: "py-26 md:py-30" as const,
     custom: "" as const,
   },
 };

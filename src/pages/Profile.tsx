@@ -3,16 +3,21 @@ import { profile } from "../data/profile";
 import type { Avatar } from "../types/Profile/Profile";
 import { Heading } from "../components/ui/Heading";
 import GlassContainer from "../components/ui/GlassContainer";
+import { Section } from "../components/ui/Section";
+import { FlagOutlined, EnvironmentOutlined } from "@ant-design/icons";
+import Footer from "../components/layout/Footer";
 
 const Avatar = ({ label, image }: Avatar) => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-1.5">
       <img
-        className="w-20 h-20 rounded-full object-cover object-center border-2 border-white/30 shadow-lg"
+        className="w-14 h-14 rounded-full object-cover object-center border-2 border-white/30 shadow-lg"
         src={image}
         alt="Jacopo Gianfaldoni"
       />
-      <Heading text={label} className="text-3xl md:text-4xl text-white" />
+      <Heading level="custom" className="text-lg font-bold">
+        {label}
+      </Heading>
     </div>
   );
 };
@@ -21,50 +26,58 @@ export const Profile = () => {
   return (
     <>
       <Navbar navState="sm" />
-      <section className="py-30 px-sections-mobile md:px-sections grid grid-cols-1 lg:grid-cols-[1fr_4fr] text-txt font-p-1 min-h-[90vh] gap-x-8 gap-y-3">
+      <Section
+        paddingY="large"
+        extraClasses="grid grid-cols-1 lg:grid-cols-[2fr_4fr] text-txt font-p-1 gap-8 gap-y-3"
+      >
         <GlassContainer
           opacity="70"
-          variant="default"
-          className="h-fit overflow-x-auto"
+          variant="custom"
+          className="overflow-x-auto"
         >
-          <Avatar label={profile.name} image={profile.avatar.image} />
-
-          <ul className="flex flex-col text-lg text-white list-none font-p-1 font-bold gap-2 mt-4">
-            {profile.contacts.map((contact, index) => (
-              <li
-                key={index}
-                className="hover:text-theme-aqua-500 transition-colors"
-              >
-                <a href={contact.link} className="flex items-center gap-2">
-                  <span className="text-theme-aqua-500">→</span>
-                  <span>{contact.content}</span>
-                </a>
+          <div className="p-3 min-w-max">
+            <Avatar
+              label={`${profile.name} ${profile.surname}`}
+              image={profile.avatar.image}
+            />
+            <ul className="text-theme-aqua-100 mt-4 text-normal">
+              <li>{profile.age + " anni"}</li>
+              <li>
+                <FlagOutlined /> {profile.nationality}
               </li>
-            ))}
-          </ul>
-
-          <p className="text-white/80 mt-4 text-lg">{profile.age + " anni"}</p>
+            </ul>
+            <ul className="flex flex-col text-sm text-theme-aqua-100 list-none font-p-1 font-bold gap-2 mt-4">
+              {profile.contacts.map((contact, index) => (
+                <li
+                  key={index}
+                  className="hover:text-theme-aqua-300 transition-colors cursor-pointer"
+                >
+                  <a href={contact.link} className="flex items-center gap-2">
+                    {contact.icon} <span>{contact.content}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </GlassContainer>
 
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-3">
           <GlassContainer opacity="70" variant="default">
-            <Heading
-              text="About me"
-              className="text-4xl md:text-5xl text-white mb-4"
-            />
-            <div className="relative">
-              <p className="text-white/90 leading-relaxed text-lg">
+            <Heading level="custom" className="font-normal text-2xl">
+              Chi sono
+            </Heading>
+            <div className="relative mt-1.5">
+              <p className="text-white/90 leading-6 text-md">
                 {profile.aboutMe}
               </p>
             </div>
           </GlassContainer>
 
           <GlassContainer opacity="70" variant="default">
-            <Heading
-              text="Esperienze Lavorative"
-              className="text-3xl md:text-4xl text-white mb-4"
-            />
-            <div className="flex flex-col gap-4">
+            <Heading level="custom" className="font-normal text-2xl">
+              Esperienze Lavorative
+            </Heading>
+            <div className="flex flex-col gap-4 mt-3">
               {profile.workExperience.map((experience) => (
                 <GlassContainer
                   key={experience.name}
@@ -83,16 +96,22 @@ export const Profile = () => {
                     </span>
                   </div>
                   <Heading
-                    text={experience.name}
-                    className="text-2xl md:text-3xl text-white mb-2"
-                  />
-                  <p className="text-white/80 text-lg">{experience.where}</p>
+                    fontFamily="fontP"
+                    level="custom"
+                    className="text-md"
+                  >
+                    {experience.name}
+                  </Heading>
+                  <p className="text-theme-aqua-100 text-sm">
+                    <EnvironmentOutlined /> {experience.where}
+                  </p>
                 </GlassContainer>
               ))}
             </div>
           </GlassContainer>
         </div>
-      </section>
+      </Section>
+      <Footer />
     </>
   );
 };

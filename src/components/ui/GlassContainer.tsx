@@ -4,24 +4,26 @@ interface GlassContainerProps {
   opacity?: "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90";
   children: React.ReactNode;
   className?: string;
-  variant?: "default" | "card" | "hero" | "image";
+  variant?: "default" | "card" | "hero" | "image" | "custom";
   hover?: boolean;
 }
 
-const GlassContainer: React.FC<GlassContainerProps> = ({ 
-  opacity = "60", 
-  children, 
+const GlassContainer: React.FC<GlassContainerProps> = ({
+  opacity = "60",
+  children,
   className = "",
   variant = "default",
-  hover = false
+  hover = false,
 }) => {
-  const baseStyles = "overflow-hidden rounded-2xl border-2 border-white/20 backdrop-blur-md";
-  
+  const baseStyles =
+    "overflow-hidden rounded-2xl border-2 border-white/20 backdrop-blur-md";
+
   const variants = {
     default: "p-6",
     card: "p-4 transition-all duration-300",
     hero: "p-8 md:p-12",
-    image: "p-0"
+    image: "p-0",
+    custom: "",
   };
 
   const hoverStyles = hover ? "hover:border-white/40 hover:scale-[1.02]" : "";
@@ -34,11 +36,13 @@ const GlassContainer: React.FC<GlassContainerProps> = ({
     "60": "opacity-60",
     "70": "opacity-70",
     "80": "opacity-80",
-    "90": "opacity-90"
+    "90": "opacity-90",
   };
 
   return (
-    <div className={`${baseStyles} ${variants[variant]} ${hoverStyles} ${className}`}>
+    <div
+      className={`${baseStyles} ${variants[variant]} ${hoverStyles} ${className}`}
+    >
       <div
         className={`absolute inset-0 bg-gradient-to-br from-theme-gray-800 via-theme-aqua-600 to-theme-gray-950 blur-3xl ${backgroundOpacity[opacity]} -z-10 transition-all duration-500`}
       />

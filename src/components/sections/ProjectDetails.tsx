@@ -10,6 +10,7 @@ import type { Project } from "../../types/Project/Project";
 import { Heading } from "../ui/Heading";
 import Button from "../ui/Button";
 import GlassContainer from "../ui/GlassContainer";
+import { LeftCircleOutlined } from "@ant-design/icons";
 
 interface Animations {
   in?: string;
@@ -73,27 +74,17 @@ export const ProjectDetails = () => {
         <div className="flex flex-col gap-6">
           {/* Header con titolo e pulsanti */}
           <div className="flex flex-col md:flex-row gap-3 md:gap-2 w-full md:items-center">
-            <Heading
-              text={project?.label}
-              className="text-white text-2xl md:text-4xl lg:text-5xl font-bold"
-            />
+            <Heading level="secondary">{project?.label}</Heading>
             <div className="flex gap-2 md:ml-auto">
               <Button
+                className="text-theme-aqua-100 text-2xl cursor-pointer"
                 onClick={async () => {
                   setIsOpen(false);
                   await closeModal(-1);
                 }}
-                text="← Indietro"
-                className="text-base md:text-lg text-white cursor-pointer border-2 border-white/30 hover:border-theme-aqua-500 transition-colors px-4 py-2"
-              />
-              <Button
-                onClick={async () => {
-                  setIsOpen(false);
-                  await closeModal("/portfolio");
-                }}
-                text="✕ Chiudi"
-                className="text-base md:text-lg text-white cursor-pointer border-2 border-white/30 hover:border-theme-aqua-500 transition-colors px-4 py-2"
-              />
+              >
+                <LeftCircleOutlined />
+              </Button>
             </div>
           </div>
 

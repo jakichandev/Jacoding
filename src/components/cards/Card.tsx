@@ -54,8 +54,8 @@ export const ProjectCard = ({
         <Heading
           level="tertiary"
           color="sunsetEnd"
-          weight="normal"
-          className="text-center"
+          weight="bold"
+          className="text-center mb-2"
         >
           {label}
         </Heading>
@@ -64,7 +64,9 @@ export const ProjectCard = ({
           alt={`${label} Screenshot`}
           className="rounded-lg border-2 border-white/30 w-full h-[16rem] md:h-[12rem] object-cover object-center"
         />
-        <p className="text-white font-p-1 text-sm my-4 text-left">{body}</p>
+        <p className="text-theme-aqua-100 font-p-1 text-sm my-4 text-left">
+          {body}
+        </p>
         <div className="flex items-center gap-2 mt-auto">
           {stack.map((tech) => (
             <img
