@@ -38,10 +38,12 @@ const Hero = () => {
           <div className="mt-8">
             <Button
               onClick={() => navigate("/portfolio")}
-              className="text-2xl px-6 py-2 ring-2 ring-theme-sunset-end-300 shadow-theme-sunset-end-300 text-theme-sunset-end-200"
+              level={1}
+              color="sunsetEnd"
+              className="gap-1"
             >
               View my projects
-              <RocketFilled rotate={45} className="text-xl ml-2" />
+              <RocketFilled rotate={45} className="text-2xl ml-2" />
             </Button>
           </div>
         </div>

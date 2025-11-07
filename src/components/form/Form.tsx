@@ -74,7 +74,11 @@ export const Form = () => {
             </div>
 
             {/* Bottone per inviare un altro messaggio */}
-            <Button onClick={() => setSuccess(false)} className="mt-4 text-xl">
+            <Button
+              onClick={() => setSuccess(false)}
+              level={2}
+              color="sunsetEnd"
+            >
               Invia un altro messaggio
             </Button>
           </div>
@@ -88,11 +92,8 @@ export const Form = () => {
       <GlassContainer
         variant="hero"
         opacity="70"
-        className="w-full max-w-3xl flex flex-col items-center px-5 pt-14 pb-2 md:py-12"
+        className="w-full max-w-3xl flex flex-col items-center px-5 py-8 md:py-12"
       >
-        <Heading weight="normal" level="secondary">
-          Parlami della tua idea
-        </Heading>
         <form
           onSubmit={(e) =>
             sendMail(
@@ -104,7 +105,7 @@ export const Form = () => {
               setSuccess
             )
           }
-          className="text-white relative z-20 font-p-1 w-full space-y-3"
+          className="text-white relative z-20 font-p-1 space-y-3 w-full"
         >
           <FormField
             name="name"
@@ -138,7 +139,9 @@ export const Form = () => {
           />
           <Button
             type="submit"
-            className="mt-2 w-full md:w-96 mx-auto ring-2 ring-theme-sunset-end-400 text-theme-sunset-end-200"
+            level={2}
+            color="sunsetEnd"
+            className="mx-auto mt-6 w-full"
           >
             Invia il messaggio
             <SendOutlined className="ml-2" />

@@ -20,7 +20,7 @@ export const FormField: React.FC<FieldProps> = ({
   };
 
   const inputClasses =
-    "w-full bg-txt-2 rounded-lg p-2 text-bg-dark font-medium border-2 border-transparent focus:border-theme-aqua-900 focus:outline-none transition-colors";
+    "bg-txt-2 rounded-lg p-2 text-bg-dark font-medium border-2 border-transparent focus:border-theme-aqua-900 focus:outline-none transition-colors";
 
   if (inputType === "textarea") {
     return (
@@ -45,7 +45,7 @@ export const FormField: React.FC<FieldProps> = ({
         type={inputType}
         placeholder={placeholder}
         onChange={handleChange}
-        className={inputClasses + " py-1.5 px-5"}
+        className={inputClasses + " py-1.5"}
       />
     </div>
   );
