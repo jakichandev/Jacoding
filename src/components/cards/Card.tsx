@@ -26,10 +26,10 @@ export const ProjectCard = ({
           className="flex flex-col items-center gap-2"
         >
           <Heading
-            level="tertiary"
+            level="custom"
             color="sunsetEnd"
             weight="normal"
-            className="text-center"
+            className="text-center text-xl md:text-2xl"
           >
             {label}
           </Heading>

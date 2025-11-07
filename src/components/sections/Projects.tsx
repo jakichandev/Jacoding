@@ -3,10 +3,12 @@ import { projects } from "../../data/projects";
 import { ProjectCard } from "../cards/Card";
 import { Section } from "../ui/Section";
 import lines from "../../assets/svg/lines.svg";
+import { BluredSeparator } from "../ui/Items/separators";
 
 export const Projects = () => {
   return (
-    <Section extraClasses="relative">
+    <Section extraClasses="relative overflow-hidden">
+      <BluredSeparator position="top" height="md" />
       <img
         src={lines}
         alt="Decorative lines"
@@ -42,7 +44,7 @@ export const Projects = () => {
         </span>
         <span>Clicca sull'icona per vedere il mio profilo GitHub</span>
       </p>
-      <div className="grid grid-cols-3 md:grid-cols-5 my-18 gap-x-4 gap-y-2 mx-auto justify-center">
+      <div className="grid grid-cols-3 md:grid-cols-4 my-18 gap-x-4 gap-y-2 mx-auto justify-center">
         {projects.map((project) => (
           <ProjectCard
             key={project["label"]}
@@ -55,6 +57,7 @@ export const Projects = () => {
           />
         ))}
       </div>
+      <BluredSeparator position="bottom" height="md" />
     </Section>
   );
 };

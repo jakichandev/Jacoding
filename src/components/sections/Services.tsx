@@ -5,6 +5,7 @@ import { services } from "../../data/services";
 import { useRef, useState, useEffect } from "react";
 import { Section } from "../ui/Section";
 import square from "../../assets/svg/squares.svg";
+import { BluredSeparator } from "../ui/Items/separators";
 
 export const ServiceCard = ({ label, img, desc, index }: Service) => {
   return (
@@ -70,7 +71,7 @@ export const Services = () => {
 
   return (
     <Section extraClasses="relative overflow-hidden z-20">
-      <div className="absolute top-0 left-0 w-full h-18 bg-gradient-to-b from-theme-gray-900 to-transparent z-10 "></div>
+      <BluredSeparator position="top" />
       <div className="absolute bottom-0 left-0 w-full h-18 bg-gradient-to-t from-theme-gray-900 to-transparent z-10 "></div>
 
       <Heading>I miei servizi</Heading>
@@ -127,6 +128,7 @@ export const Services = () => {
           ))}
         </div>
       </div>
+      <BluredSeparator position="bottom" />
     </Section>
   );
 };
