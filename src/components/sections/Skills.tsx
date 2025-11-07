@@ -6,6 +6,7 @@ import {
   ApartmentOutlined,
   ToolOutlined,
 } from "@ant-design/icons";
+import GlassContainer from "../ui/GlassContainer";
 
 interface TechStack {
   programmingLangs: Tech[];
@@ -44,26 +45,44 @@ const techStack: TechStack = {
 
 const TechSkill = ({ techs, label, icon }: Techs) => {
   return (
-    <article className="my-12 flex flex-col md:grid grid-cols-2 justify-around items-center">
-      <Heading
-        fontFamily="fontP"
-        level="custom"
-        color="sunsetEnd"
-        className="text-lg md:text-2xl grid-cols-1"
-      >
-        {icon} {label}
-      </Heading>
-      <ul className="grid grid-cols-3 grid-rows-2 gap-4 mt-5">
-        {techs.map((tech, index) => (
-          <li key={index} className="flex my-2 md:my-0 items-center gap-1.5">
-            <img src={tech.icon} alt={tech.name} className="w-6 h-6 " />
-            <span className="text-white text-sm font-p-1 font-bold">
-              {tech.name}
-            </span>
-          </li>
-        ))}
-      </ul>
-    </article>
+    <GlassContainer variant="custom" className="my-8 p-5 md:p-6" opacity="40">
+      <article className="flex flex-col gap-6">
+        {/* Header con icona e titolo */}
+        <div className="flex items-center gap-3 pb-4 border-b border-white/20">
+          <span className="text-theme-aqua-500 text-2xl md:text-3xl">
+            {icon}
+          </span>
+          <Heading
+            fontFamily="fontP"
+            level="custom"
+            className="text-xl md:text-2xl font-semibold text-white"
+          >
+            {label}
+          </Heading>
+        </div>
+
+        {/* Griglia tech */}
+        <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+          {techs.map((tech, index) => (
+            <li
+              key={index}
+              className="group flex flex-col items-center gap-2 p-3 rounded-lg bg-white/5 hover:bg-white/10 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_15px_rgba(78,205,196,0.3)]"
+            >
+              <div className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-white/10 rounded-lg group-hover:bg-theme-aqua-500/20 transition-colors">
+                <img
+                  src={tech.icon}
+                  alt={tech.name}
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain brightness-110 drop-shadow-[0_0_8px_rgba(78,205,196,0.4)]"
+                />
+              </div>
+              <span className="text-white/90 text-xs md:text-sm font-p-1 font-semibold text-center group-hover:text-theme-aqua-400 transition-colors">
+                {tech.name}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </article>
+    </GlassContainer>
   );
 };
 

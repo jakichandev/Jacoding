@@ -16,7 +16,7 @@ const GlassContainer: React.FC<GlassContainerProps> = ({
   hover = false,
 }) => {
   const baseStyles =
-    "overflow-hidden rounded-2xl border-2 border-white/20 backdrop-blur-md";
+    "overflow-hidden rounded-2xl border-2 border-theme-aqua-100/10 backdrop-blur-md";
 
   const variants = {
     default: "p-6",

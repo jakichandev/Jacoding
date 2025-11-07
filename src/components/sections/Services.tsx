@@ -4,6 +4,7 @@ import type { Service } from "../../types/Service/Service";
 import { services } from "../../data/services";
 import { useRef, useState, useEffect } from "react";
 import { Section } from "../ui/Section";
+import square from "../../assets/svg/squares.svg";
 
 export const ServiceCard = ({ label, img, desc, index }: Service) => {
   return (
@@ -68,8 +69,25 @@ export const Services = () => {
   };
 
   return (
-    <Section>
+    <Section extraClasses="relative overflow-hidden z-20">
+      <div className="absolute top-0 left-0 w-full h-18 bg-gradient-to-b from-theme-gray-900 to-transparent z-10 "></div>
+      <div className="absolute bottom-0 left-0 w-full h-18 bg-gradient-to-t from-theme-gray-900 to-transparent z-10 "></div>
+
       <Heading>I miei servizi</Heading>
+      <div id="block-image" className="absolute right-0 top-0 opacity-45">
+        <img
+          className="w-[44rem] h-auto top-0 right-0 relative scale-y-[-1]"
+          src={square}
+          alt="Decorative squares"
+        />
+      </div>
+      <div className="absolute left-0 bottom-0 scale-x-[-1] opacity-45">
+        <img
+          className="w-[44rem] h-auto"
+          src={square}
+          alt="Decorative squares"
+        />
+      </div>
       <p className="text-xl font-p-1 text-txt text-center font-medium italic">
         con le migliori tecnologie sul mercato
       </p>
