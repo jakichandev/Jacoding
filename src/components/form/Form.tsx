@@ -90,7 +90,9 @@ export const Form = () => {
         opacity="70"
         className="w-full max-w-3xl flex flex-col items-center px-5 pt-14 pb-2 md:py-12"
       >
-        <Heading text="Contattami" className="text-4xl z-20 text-white mb-6" />
+        <Heading weight="normal" level="secondary">
+          Parlami della tua idea
+        </Heading>
         <form
           onSubmit={(e) =>
             sendMail(

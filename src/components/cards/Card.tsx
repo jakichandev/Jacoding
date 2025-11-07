@@ -52,9 +52,13 @@ export const ProjectCard = ({
     <Card>
       <Link to={`/portfolio/${label}`} className="flex flex-col">
         <Heading
-          text={label}
-          className="text-xl md:text-3xl text-white font-bold mb-4"
-        />
+          level="tertiary"
+          color="sunsetEnd"
+          weight="normal"
+          className="text-center"
+        >
+          {label}
+        </Heading>
         <img
           src={`/${image}`}
           alt={`${label} Screenshot`}

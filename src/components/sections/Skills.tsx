@@ -1,6 +1,11 @@
 import { Heading } from "../ui/Heading";
 import type { Tech } from "../../types/Tech/Tech";
 import { Section } from "../ui/Section";
+import {
+  BranchesOutlined,
+  ApartmentOutlined,
+  ToolOutlined,
+} from "@ant-design/icons";
 
 interface TechStack {
   programmingLangs: Tech[];
@@ -11,6 +16,7 @@ interface TechStack {
 interface Techs {
   techs: Tech[];
   label: string;
+  icon: React.ReactNode;
 }
 
 const techStack: TechStack = {
@@ -36,7 +42,7 @@ const techStack: TechStack = {
   ],
 };
 
-const TechSkill = ({ techs, label }: Techs) => {
+const TechSkill = ({ techs, label, icon }: Techs) => {
   return (
     <article className="my-12 flex flex-col md:grid grid-cols-2 justify-around items-center">
       <Heading
@@ -45,12 +51,12 @@ const TechSkill = ({ techs, label }: Techs) => {
         color="sunsetEnd"
         className="text-lg md:text-2xl grid-cols-1"
       >
-        {`#${label}`}
+        {icon} {label}
       </Heading>
-      <ul className="grid grid-cols-3 grid-rows-2 gap-2 mt-5">
+      <ul className="grid grid-cols-3 grid-rows-2 gap-4 mt-5">
         {techs.map((tech, index) => (
           <li key={index} className="flex my-2 md:my-0 items-center gap-1.5">
-            <img src={tech.icon} alt={tech.name} className="w-4 h-4" />
+            <img src={tech.icon} alt={tech.name} className="w-6 h-6 " />
             <span className="text-white text-sm font-p-1 font-bold">
               {tech.name}
             </span>
@@ -67,11 +73,20 @@ export const Skills = () => {
       <Heading>Competenze Tecniche</Heading>
 
       <TechSkill
+        icon={<ToolOutlined />}
         label="Linguaggi di programmazione"
         techs={techStack.programmingLangs}
       />
-      <TechSkill label="Frameworks" techs={techStack.frameworks} />
-      <TechSkill label="Tools" techs={techStack.tools} />
+      <TechSkill
+        icon={<ApartmentOutlined />}
+        label="Frameworks"
+        techs={techStack.frameworks}
+      />
+      <TechSkill
+        icon={<BranchesOutlined />}
+        label="Tools"
+        techs={techStack.tools}
+      />
     </Section>
   );
 };
