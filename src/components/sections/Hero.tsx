@@ -5,11 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { Section } from "../ui/Section";
 import { RocketFilled } from "@ant-design/icons";
 import { BackgroundItem1 } from "../ui/Background/Items";
+import { BluredSeparator } from "../ui/Items/separators";
 
 const Hero = () => {
   const navigate = useNavigate();
   return (
     <Section paddingY="custom" extraClasses="pt-4 pb-22 md:py-22 relative">
+      <BluredSeparator position="top" height="lg" />
+
       <BackgroundItem1 />
       <GlassContainer
         opacity="60"
@@ -48,6 +51,7 @@ const Hero = () => {
           </div>
         </div>
       </GlassContainer>
+      <BluredSeparator position="bottom" />
     </Section>
   );
 };

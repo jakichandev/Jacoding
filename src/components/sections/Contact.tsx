@@ -7,7 +7,7 @@ import { Heading } from "../ui/Heading";
 
 export const Contact = () => {
   return (
-    <Section>
+    <Section extraClasses="mb-12 md:mb-0">
       <Heading level="primary" className="mb-10">
         Scopri di più o contattami
       </Heading>

@@ -7,6 +7,7 @@ import {
   ToolOutlined,
 } from "@ant-design/icons";
 import GlassContainer from "../ui/GlassContainer";
+import particular from "../../assets/svg/particular.svg";
 
 interface TechStack {
   programmingLangs: Tech[];
@@ -90,7 +91,12 @@ export const Skills = () => {
   return (
     <Section extraClasses="relative">
       <Heading>Competenze Tecniche</Heading>
-
+      <div className="absolute top-4/6 -translate-y-4/6 left-0 w-[46rem] -rotate-90 -translate-x-40 opacity-20">
+        <img src={particular} alt="Particolare decorativo" />
+      </div>
+      <div className="absolute top-2/6 -translate-y-2/6 right-0 w-[46rem] rotate-90 translate-x-40 opacity-40">
+        <img src={particular} alt="Particolare decorativo" />
+      </div>
       <TechSkill
         icon={<ToolOutlined />}
         label="Linguaggi di programmazione"

@@ -1,4 +1,4 @@
-import bitSvg from "../../../assets/svg/01.svg";
+import back from "../../../assets/svg/back.svg";
 
 export const BackgroundItem1 = () => {
   return (
@@ -7,9 +7,9 @@ export const BackgroundItem1 = () => {
       className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none"
     >
       <img
-        src={bitSvg}
-        alt="Decorative 0 and 1 illustration"
-        className="object-cover relative w-full h-full opacity-40 blur-[1.5px]"
+        src={back}
+        alt="Decorative background illustration"
+        className="object-cover absolute top-0 w-full h-full left-0 opacity-10"
       />
     </div>
   );
