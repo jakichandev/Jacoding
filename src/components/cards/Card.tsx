@@ -60,7 +60,7 @@ export const ProjectCard = ({
           {label}
         </Heading>
         <img
-          src={`/${image}`}
+          src={image !== "" ? `/${image}` : "/coming_soon.jpg"}
           alt={`${label} Screenshot`}
           className="rounded-lg border-2 border-white/30 w-full h-[16rem] md:h-[12rem] object-cover object-center"
         />

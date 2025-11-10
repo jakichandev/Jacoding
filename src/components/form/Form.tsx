@@ -69,17 +69,18 @@ export const Form = () => {
             <div className="flex flex-col items-center gap-2">
               <Heading level="primary" color="sunsetEnd"></Heading>
               <p className="text-white/70 font-p-1 text-lg text-center max-w-md">
-                Grazie per avermi contattato! Ti risponderò il prima possibile.
+                Your message has been sent successfully! I will get back to you
+                as soon as possible.
               </p>
             </div>
 
-            {/* Bottone per inviare un altro messaggio */}
+            {/* Button to send another message */}
             <Button
               onClick={() => setSuccess(false)}
               level={2}
               color="sunsetEnd"
             >
-              Invia un altro messaggio
+              Send another message
             </Button>
           </div>
         </GlassContainer>
@@ -110,29 +111,29 @@ export const Form = () => {
           <FormField
             name="name"
             label="Nome"
-            placeholder="inserisci il tuo nome"
+            placeholder="enter your name"
             setFormValues={setFormValues}
             formValues={formValues}
           />
           <FormField
             name="surname"
-            label="Cognome"
-            placeholder="inserisci il tuo cognome"
+            label="Surname"
+            placeholder="enter your surname"
             setFormValues={setFormValues}
             formValues={formValues}
           />
           <FormField
             name="email"
             label="Email"
-            placeholder="inserisci la tua email"
+            placeholder="enter your valid email"
             inputType="email"
             setFormValues={setFormValues}
             formValues={formValues}
           />
           <FormField
             name="message"
-            label="Parlami della tua idea!"
-            placeholder="Minimo 30 caratteri"
+            label="Tell me about your idea!"
+            placeholder="Minimum 30 characters"
             inputType="textarea"
             setFormValues={setFormValues}
             formValues={formValues}
@@ -143,7 +144,7 @@ export const Form = () => {
             color="sunsetEnd"
             className="mx-auto mt-6 w-full"
           >
-            Invia il messaggio
+            Send Message
             <SendOutlined className="ml-2" />
           </Button>
         </form>

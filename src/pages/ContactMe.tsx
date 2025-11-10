@@ -12,7 +12,7 @@ const ContactMePage = () => {
         paddingY="large"
         extraClasses="flex flex-col items-center gap-8 md:gap-12"
       >
-        <Heading>Parlami della tua idea</Heading>
+        <Heading>Tell me about your idea</Heading>
         <Form />
       </Section>
       <Footer />

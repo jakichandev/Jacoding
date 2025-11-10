@@ -4,7 +4,7 @@ export const projects: Array<Project> = [
   {
     label: "MeteoMaster",
     image: "meteo.png",
-    body: "Il mio Vanilla meteo attraverso l'utilizzo di API REST, CSS con Tailwind",
+    body: "My Vanilla JS weather app using OpenWeather API to get real-time weather data",
     stack: [
       { icon: "html.svg", name: "HTML" },
       { icon: "javascript.svg", name: "Javascript" },
@@ -17,7 +17,8 @@ export const projects: Array<Project> = [
   {
     label: "Tifodb",
     image: "tifodb.png",
-    body: "Piattaforma dedicata agli appassionati del tifo calcistico, informazioni sulle curve italiane e non",
+    body: `A football database app to search all info about fans of your favorite team (rivalries, friendship, stadium, groups etc.).
+    You can test and manage data using this demo account: email: test@test.it | password: TestTest`,
     stack: [
       { icon: "react.svg", name: "React" },
       { icon: "tailwind.svg", name: "Tailwind" },
@@ -31,7 +32,7 @@ export const projects: Array<Project> = [
   {
     label: "Vibeshare",
     image: "vibeshare.png",
-    body: "Chat senza autenticazione per condividere vibrazioni positive con gli altri utenti",
+    body: "Chat with a simulated authentication (Local storage) to share positive vibes with other users",
     stack: [
       { icon: "react.svg", name: "React" },
       { icon: "tailwind.svg", name: "Tailwind" },
@@ -39,6 +40,15 @@ export const projects: Array<Project> = [
     ],
     links: {
       github: "https://github.com/jakichandev/vibeshare",
+    },
+  },
+  {
+    label: "Refrigerator Manager",
+    image: "",
+    body: "A refrigerator management app to learn Zustand (in progress)",
+    stack: [{ icon: "react.svg", name: "React" }],
+    links: {
+      github: "https://github.com/jakichandev/Zustand-Refrigerator",
     },
   },
 ];

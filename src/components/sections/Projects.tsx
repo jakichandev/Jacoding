@@ -35,14 +35,14 @@ export const Projects = () => {
         className="absolute bottom-0 right-[calc(50%-(320px/2))] -z-10 w-80 h-full opacity-10"
       />
 
-      <Heading level="primary">I miei progetti</Heading>
+      <Heading level="primary">My Projects</Heading>
       <p className="text-txt font-p-1 gap-2 mt-4 font-medium flex items-center justify-center text-sm md:text-normal">
         <span>
           <a href="/">
             <img className="w-7" src="/github.svg"></img>
           </a>
         </span>
-        <span>Clicca sull'icona per vedere il mio profilo GitHub</span>
+        <span>Click the icon to see my GitHub profile</span>
       </p>
       <div className="grid grid-cols-3 md:grid-cols-4 my-18 gap-x-4 gap-y-2 mx-auto justify-center">
         {projects.map((project) => (

@@ -1,21 +1,21 @@
 import type { Service } from "../types/Service/Service";
 export const services: Service[] = [
   {
-    label: "Siti web",
+    label: "Websites",
     img: "website.jpg",
     link: "/services/websites",
-    desc: "Siti web User-friendly, moderni e responsive",
+    desc: "User-friendly, modern, and responsive websites",
   },
   {
     label: "Web Applications",
     img: "applications.jpg",
     link: "/services/webApplications",
-    desc: "Applicazioni strutturate per funzionare su un browser web come gestionali, dashboards, social network",
+    desc: "Structured applications designed to run on a web browser such as management systems, dashboards and social networks",
   },
   {
     label: "Templates",
     img: "./templates.jpg",
     link: "/services/templates",
-    desc: "Template pronti e facilmente integrabili per sviluppatori",
+    desc: "Ready-to-use and easily integrable templates for developers",
   },
 ];

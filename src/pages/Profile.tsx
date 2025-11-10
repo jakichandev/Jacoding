@@ -41,7 +41,7 @@ export const Profile = () => {
               image={profile.avatar.image}
             />
             <ul className="text-theme-aqua-100 mt-4 text-normal">
-              <li>{profile.age + " anni"}</li>
+              <li>{profile.age + " years"}</li>
               <li>
                 <FlagOutlined /> {profile.nationality}
               </li>
@@ -64,7 +64,7 @@ export const Profile = () => {
         <div className="flex flex-col gap-3">
           <GlassContainer opacity="70" variant="default">
             <Heading level="custom" className="font-normal text-2xl">
-              Chi sono
+              About Me
             </Heading>
             <div className="relative mt-1.5">
               <p className="text-white/90 leading-6 text-md">
@@ -75,7 +75,7 @@ export const Profile = () => {
 
           <GlassContainer opacity="70" variant="default">
             <Heading level="custom" className="font-normal text-2xl">
-              Esperienze Lavorative
+              Working Experience
             </Heading>
             <div className="flex flex-col gap-4 mt-3">
               {profile.workExperience.map((experience) => (

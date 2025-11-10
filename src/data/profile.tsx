@@ -27,22 +27,22 @@ export const profile: Profile = {
       when: { from: 2020, to: 2025 },
     },
   ],
-  aboutMe: `Dopo 5 anni come operatore tecnico video in un service
-dedicato ad eventi e congressi ho deciso di provare a crearmi
-l’opportunità di diventare uno sviluppatore frontend. Perché
-Frontend? Non che disprezzi il backend, però il frontend lo
-sento più il mio campo dato che alle superiori ho studiato
-graphic design e mi sento più portato a sviluppare l’esperienza
-e l’aspetto di un’applicazione Web (pur sapendo che il mondo
-del frontend va molto oltre al concetto di grafica e web design).
-Con il mio studio da autodidatta sono arrivato a saper
-sviluppare Web Applications con React o NextJs, styled
-components e saper gestire il loro stato sia locale che globale,
-inoltre con lo studio di NodeJS riesco a creare un backend con
-Express realizzando CRUD applications e autenticazione con
-JWT integrando la comunicazione con database come
-MongoDB o mySQL. Ho tanta voglia di provare a confrontarmi
-con questo mondo e tanta voglia di imparare nuove tecnologie.
-Il mio obiettivo futuro? Sviluppare in flutter e avere piena
-padronanza dell’IA`,
+  aboutMe: `After five years as a video technician in a service
+dedicated to events and conferences, I decided to try to create
+an opportunity for myself to become a frontend developer. Why
+frontend? It's not that I dislike backend, but I feel that frontend
+is more my field, since I studied graphic design in high school
+and I feel more inclined to develop the experience
+and appearance of a web application (even though I know that the world
+of frontend goes far beyond the concept of graphics and web design).
+Through self-study, I have learned how to
+develop web applications with React or NextJs, styled
+components, and how to manage their local and global status.
+Furthermore, by studying NodeJS, I am able to create a backend with
+Express, creating CRUD applications and authentication with
+JWT, integrating communication with databases such as
+MongoDB or mySQL. I am eager to test myself
+in this world and eager to learn new technologies.
+My future goal? To develop in Flutter and have full
+mastery of AI integration in applications.`,
 };

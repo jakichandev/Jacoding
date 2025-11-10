@@ -73,7 +73,7 @@ export const ProjectDetails = () => {
       >
         <div className="flex flex-col gap-6">
           {/* Header con titolo e pulsanti */}
-          <div className="flex flex-col md:flex-row gap-3 md:gap-2 w-full md:items-center">
+          <div className="flex flex-row gap-3 md:gap-2 w-full md:items-center justify-between">
             <Heading level="secondary">{project?.label}</Heading>
             <div className="flex gap-2 md:ml-auto">
               <Button
@@ -92,7 +92,11 @@ export const ProjectDetails = () => {
           <div className="relative rounded-lg overflow-hidden border-2 border-white/20 group">
             <img
               className="h-[30vh] md:h-[40vh] w-full object-center object-cover transition-transform duration-300 group-hover:scale-105"
-              src={`/${project?.image}`}
+              src={
+                project?.image !== ""
+                  ? `/${project?.image}`
+                  : "/coming_soon.jpg"
+              }
               alt={`${project?.label} Screenshot`}
               loading="lazy"
             />

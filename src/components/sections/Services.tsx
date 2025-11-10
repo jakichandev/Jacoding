@@ -74,7 +74,7 @@ export const Services = () => {
       <BluredSeparator position="top" />
       <div className="absolute bottom-0 left-0 w-full h-18 bg-gradient-to-t from-theme-gray-900 to-transparent z-10 "></div>
 
-      <Heading>I miei servizi</Heading>
+      <Heading>What i'm able to do</Heading>
       <div id="block-image" className="absolute right-0 top-0 opacity-45">
         <img
           className="w-[44rem] h-auto top-0 right-0 relative scale-y-[-1]"
@@ -90,7 +90,7 @@ export const Services = () => {
         />
       </div>
       <p className="text-xl font-p-1 text-txt text-center font-medium italic">
-        con le migliori tecnologie sul mercato
+        with the best technologies on the market
       </p>
 
       <div className="relative my-8">
