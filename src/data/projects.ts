@@ -43,6 +43,19 @@ export const projects: Array<Project> = [
     },
   },
   {
+    label: "Jbyte Portfolio",
+    image: "jbyte.png",
+    body: "My personal portfolio built with React and TailwindCSS to showcase my skills and projects.",
+    stack: [
+      { icon: "react.svg", name: "React" },
+      { icon: "tailwind.svg", name: "TailwindCSS" },
+      { icon: "typescript.svg", name: "TypeScript" },
+    ],
+    links: {
+      github: "https://github.com/jakichandev/Jbyte",
+    },
+  },
+  {
     label: "Refrigerator Manager",
     image: "",
     body: "A refrigerator management app to learn Zustand (in progress)",

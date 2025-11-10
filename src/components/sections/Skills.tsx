@@ -89,7 +89,7 @@ const TechSkill = ({ techs, label, icon }: Techs) => {
 
 export const Skills = () => {
   return (
-    <Section extraClasses="relative">
+    <Section extraClasses="relative overflow-x-hidden">
       <Heading>Technical Skills</Heading>
       <div className="absolute top-4/6 -translate-y-4/6 left-0 w-[46rem] -rotate-90 -translate-x-40 opacity-20">
         <img src={particular} alt="Decorative detail" />

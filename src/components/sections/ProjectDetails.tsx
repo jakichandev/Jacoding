@@ -113,7 +113,7 @@ export const ProjectDetails = () => {
             {/* Stack tecnologico */}
             <div className="flex flex-col gap-2">
               <h3 className="text-white/70 text-sm font-semibold uppercase tracking-wider">
-                Stack Tecnologico
+                Technology Stack
               </h3>
               <ul className="flex gap-3 flex-wrap">
                 {project?.stack?.map((tech) => (
