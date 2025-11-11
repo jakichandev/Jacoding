@@ -5,10 +5,12 @@ import { projects } from "../data/projects";
 import { ProjectCard } from "../components/cards/Card";
 import { Section } from "../components/ui/Section";
 import Footer from "../components/layout/Footer";
+import { ScrollRestoration } from "react-router-dom";
 
 export const Portfolio = () => {
   return (
     <>
+      <ScrollRestoration />
       <Navbar navState="sm" />
       <Section paddingY="large">
         <Heading>portfolio</Heading>

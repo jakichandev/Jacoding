@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 interface HeadingType {
   className?: string;
   children?: React.ReactNode;
@@ -30,10 +31,14 @@ export const Heading: React.FC<HeadingType> = ({
   fontFamily = "fontH",
 }) => {
   return (
-    <h2
+    <motion.h2
+      initial={{ opacity: 0, y: -20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 2 }}
+      viewport={{ once: true }}
       className={`uppercase ${HEADING_STYLES[fontFamily]} ${HEADING_STYLES[color]} ${HEADING_STYLES[level]} ${HEADING_STYLES[weight]} ${className}`}
     >
       {children}
-    </h2>
+    </motion.h2>
   );
 };

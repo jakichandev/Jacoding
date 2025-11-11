@@ -6,6 +6,7 @@ import GlassContainer from "../components/ui/GlassContainer";
 import { Section } from "../components/ui/Section";
 import { FlagOutlined, EnvironmentOutlined } from "@ant-design/icons";
 import Footer from "../components/layout/Footer";
+import { ScrollRestoration } from "react-router-dom";
 
 const Avatar = ({ label, image }: Avatar) => {
   return (
@@ -25,6 +26,7 @@ const Avatar = ({ label, image }: Avatar) => {
 export const Profile = () => {
   return (
     <>
+      <ScrollRestoration />
       <Navbar navState="sm" />
       <Section
         paddingY="large"

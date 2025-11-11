@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 interface GlassContainerProps {
   opacity?: "20" | "30" | "40" | "50" | "60" | "70" | "80" | "90";
@@ -40,14 +41,18 @@ const GlassContainer: React.FC<GlassContainerProps> = ({
   };
 
   return (
-    <div
+    <motion.div
+      initial={{ filter: "blur(5px)", opacity: 0 }}
+      whileInView={{ filter: "blur(0px)", opacity: 1 }}
+      transition={{ duration: 1.2 }}
+      viewport={{ once: true }}
       className={`${baseStyles} ${variants[variant]} ${hoverStyles} ${className}`}
     >
       <div
         className={`absolute inset-0 bg-gradient-to-br from-theme-gray-800 via-theme-aqua-600 to-theme-gray-950 blur-3xl ${backgroundOpacity[opacity]} -z-10 transition-all duration-500`}
       />
       {children}
-    </div>
+    </motion.div>
   );
 };
 

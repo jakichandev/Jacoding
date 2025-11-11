@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 type SectionProps = {
   children: React.ReactNode;
   extraClasses?: string;
@@ -22,7 +23,14 @@ export const Section = ({
   paddingY = "default",
 }: SectionProps) => {
   return (
-    <section
+    <motion.section
+      initial={{ opacity: 0, y: 150 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{
+        type: "spring",
+        duration: 2,
+      }}
+      viewport={{ once: true }}
       className={
         custom
           ? `${extraClasses}`
@@ -30,6 +38,6 @@ export const Section = ({
       }
     >
       {children}
-    </section>
+    </motion.section>
   );
 };

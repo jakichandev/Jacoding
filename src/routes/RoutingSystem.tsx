@@ -1,4 +1,4 @@
-import { useRoutes } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "../App";
 import Collaborate from "../pages/ContactMe";
 import { Portfolio } from "../pages/Portfolio";
@@ -6,7 +6,7 @@ import { ProjectDetails } from "../components/sections/ProjectDetails";
 import { Profile } from "../pages/Profile";
 import ContactMePage from "../pages/ContactMe";
 
-const routings = [
+const Router = createBrowserRouter([
   { path: "/", element: <App /> },
   { path: "collaborate", element: <Collaborate /> },
   { path: "*", element: <div>Not Found</div> },
@@ -28,11 +28,10 @@ const routings = [
     path: "contact",
     element: <ContactMePage />,
   },
-];
+]);
 
 const RoutingSystem = () => {
-  const routing = useRoutes(routings);
-  return routing;
+  return <RouterProvider router={Router} />;
 };
 
 export default RoutingSystem;
