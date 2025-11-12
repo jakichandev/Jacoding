@@ -51,7 +51,7 @@ const Footer = () => {
             {/* Colonna 2: Navigazione */}
             <div className="flex flex-col gap-4">
               <Heading color="sunsetEnd" level="tertiary">
-                Navigazione
+                Navigation
               </Heading>
               <ul className="flex flex-col gap-3">
                 {routes.map((route) => (
@@ -71,7 +71,7 @@ const Footer = () => {
             {/* Colonna 3: Contatti */}
             <div className="flex flex-col gap-4">
               <Heading color="sunsetEnd" level="tertiary">
-                Contatti
+                Contacts
               </Heading>
               <div className="flex flex-col gap-3 text-white/70 font-p-1">
                 <a
@@ -89,7 +89,7 @@ const Footer = () => {
                   jacopogianfaldoni@outlook.it
                 </a>
                 <a
-                  href="tel:+3933291299673"
+                  href="tel:+393291299673"
                   className="hover:text-theme-aqua-400 transition-colors duration-300 flex items-center gap-2"
                 >
                   <svg
@@ -99,7 +99,7 @@ const Footer = () => {
                   >
                     <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                   </svg>
-                  +39 329 12 99 673
+                  +39 3291299673
                 </a>
               </div>
             </div>
@@ -110,9 +110,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <div className="text-center text-white/50 font-p-1 text-sm">
-            <p>
-              © {currentYear} Jacopo Gianfaldoni. Tutti i diritti riservati.
-            </p>
+            <p>© {currentYear} Jacopo Gianfaldoni.</p>
             <p className="mt-2">
               Made in{" "}
               <span className="text-theme-aqua-500">React and Typescript</span>
